@@ -1,7 +1,8 @@
 import React from "react";
+import BurgerMenu from "../src/components/BurgerMenu";
 
 function App() {
-  return <div className="text-red-600">test</div>;
+  return <BurgerMenu />;
 }
 
 export default App;

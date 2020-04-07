@@ -1,2 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/utilities";
+
+.dark-grey-bg {
+  background-color: #a0aec0;
+}
