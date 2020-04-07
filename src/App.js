@@ -6,13 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/register" exact component={Register} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/" exact component={Home} />
-      </Switch>
-    </Router>
   );
 }
 
