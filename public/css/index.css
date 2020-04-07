@@ -10768,6 +10768,16 @@ video {
   transition-duration: 1000ms;
 }
 
+@font-face {
+  src: url("../../src/fonts/Montserrat-Bold.ttf");
+
+  font-family: gotham-book;
+}
+
+.gotham-book {
+  font-family: gotham-book;
+}
+
 .dark-grey-bg {
   background-color: #a0aec0;
 }
