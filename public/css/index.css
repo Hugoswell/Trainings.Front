@@ -10769,7 +10769,7 @@ video {
 }
 
 @font-face {
-  src: url("../../src/fonts/Montserrat-Bold.ttf");
+  src: url("../fonts/GothamRounded-Book.otf");
 
   font-family: gotham-book;
 }
@@ -10780,6 +10780,10 @@ video {
 
 .dark-grey-bg {
   background-color: #a0aec0;
+}
+
+.orange {
+  color: #d37200;
 }
 
 @media (min-width: 640px) {
