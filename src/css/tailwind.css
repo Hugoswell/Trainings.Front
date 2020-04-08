@@ -1,19 +1,55 @@
 @import "tailwindcss/base";
 @import "tailwindcss/utilities";
 
+/* FONTS */
+@font-face {
+  src: url("../fonts/GothamRounded-Bold.otf");
+  font-family: gotham-bold;
+}
+.gotham-bold {
+  font-family: gotham-bold;
+}
+
+@font-face {
+  src: url("../fonts/GothamRounded-Medium.otf");
+  font-family: gotham-medium;
+}
+.gotham-medium {
+  font-family: gotham-medium;
+}
+
 @font-face {
   src: url("../fonts/GothamRounded-Book.otf");
   font-family: gotham-book;
 }
-
 .gotham-book {
   font-family: gotham-book;
+}
+
+@font-face {
+  src: url("../fonts/GothamRounded-Light.otf");
+  font-family: gotham-light;
+}
+.gotham-light {
+  font-family: gotham-light;
+}
+/* END FONTS */
+
+/* COLORS */
+.dark-grey {
+  color: #a0aec0;
 }
 
 .dark-grey-bg {
   background-color: #a0aec0;
 }
 
+.light-grey-bg {
+  background-color: #e6e6e6;
+}
+
 .orange {
   color: #d37200;
 }
+
+/* END COLORS */
