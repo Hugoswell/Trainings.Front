@@ -1,13 +1,14 @@
 import React from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const SubscribeCta = () => {
   return (
     <div>
-      <input
-        value="M'inscrire"
-        type="button"
-        className="gotham-book orange bg-white"
-      />
+      <Router>
+        <Link to="/SignUp" className="gotham-book orange bg-white">
+          M'inscrire
+        </Link>
+      </Router>
     </div>
   );
 };
