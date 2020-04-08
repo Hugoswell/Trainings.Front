@@ -5,7 +5,7 @@ const SubscribeCta = () => {
   return (
     <div>
       <Router>
-        <Link to="/SignUp" className="gotham-book orange bg-white">
+        <Link to="/SignUp" className="gotham-book orange bg-white text-sm">
           M'inscrire
         </Link>
       </Router>
