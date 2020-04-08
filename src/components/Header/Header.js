@@ -3,9 +3,11 @@ import Hamburger from "../Hamburger/Hamburger";
 import Logo from "../Logos/Logo";
 import SubscribeCta from "../Ctas/SubscribeCta";
 import NavList from "./Nav/NavList";
+import "./Header.css";
 
 const Header = () => {
-  const [isDeployed, SetIsDeployed] = useState(true);
+  const [isDeployed, SetIsDeployed] = useState(false);
+
   const updateHeader = () => {
     SetIsDeployed((isDeployed) => !isDeployed);
   };
@@ -14,7 +16,7 @@ const Header = () => {
     <div
       className={`${
         isDeployed ? "h-screen" : "h-16"
-      } fixed top-0 w-full bg-red-300`}
+      } transition-all duration-700 ease-out fixed top-0 w-full bg-red-300`}
     >
       <div className="h-16 flex items-center justify-around">
         <Hamburger updateHeader={updateHeader} />
@@ -22,8 +24,9 @@ const Header = () => {
         <SubscribeCta isLoggedIn={false} />
       </div>
       <div
-        id="navlist"
-        className={`${isDeployed ? "flex" : "hidden"} flex-col items-center`}
+        className={`${
+          isDeployed ? "opacity-100 visible" : "opacity-0 invisible"
+        } transition-all duration-500 ease-out flex flex-col items-center`}
       >
         <NavList isLoggedIn={false} />
       </div>
