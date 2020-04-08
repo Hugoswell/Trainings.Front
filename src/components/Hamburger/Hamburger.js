@@ -1,7 +1,7 @@
 import React from "react";
-import "./BurgerMenu.css";
+import "./Hamburger.css";
 
-const BurgerMenu = () => {
+const Hamburger = () => {
   return (
     <div>
       <span className="block h-05 w-8 dark-grey-bg rounded-sm"></span>
@@ -11,4 +11,4 @@ const BurgerMenu = () => {
   );
 };
 
-export default BurgerMenu;
+export default Hamburger;

@@ -1,18 +1,20 @@
 import React from "react";
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import Hamburger from "../Hamburger/Hamburger";
 import Logo from "../Logos/Logo";
 import SubscribeCta from "../Ctas/SubscribeCta";
-import Nav from "./Nav/Nav";
+import NavList from "./Nav/NavList";
 
 const Header = () => {
   return (
     <>
       <div className="fixed top-0 w-full h-16 flex items-center justify-around">
-        <BurgerMenu />
+        <Hamburger />
         <Logo />
-        <SubscribeCta isLoggedIn={true} />
+        <SubscribeCta isLoggedIn={false} />
       </div>
-      <Nav isLoggedIn={true} />
+      <div id="nav" className="mt-16 flex flex-col items-center">
+        <NavList isLoggedIn={false} />
+      </div>
     </>
   );
 };
