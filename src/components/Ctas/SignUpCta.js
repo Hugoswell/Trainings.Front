@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
-const SubscribeCta = (props) => {
+const SignUpCta = (props) => {
   const isLoggedIn = props.isLoggedIn;
   if (!isLoggedIn) {
     return (
       <div>
         <Router>
-          <Link to="/SignUp" className="gotham-book orange bg-white text-sm">
+          <Link to="/SignUp" className="gotham-book orange bg-white text-base">
             M'inscrire
           </Link>
         </Router>
@@ -17,4 +17,4 @@ const SubscribeCta = (props) => {
   return null;
 };
 
-export default SubscribeCta;
+export default SignUpCta;
