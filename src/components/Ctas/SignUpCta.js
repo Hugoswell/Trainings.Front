@@ -1,8 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import HeaderContext from "../Header/HeaderContext";
+import { useContext } from "react";
 
-const SignUpCta = (props) => {
-  const isLoggedIn = props.isLoggedIn;
+const SignUpCta = () => {
+  const { isLoggedIn } = useContext(HeaderContext);
+
   if (!isLoggedIn) {
     return (
       <div>
