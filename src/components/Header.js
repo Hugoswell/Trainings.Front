@@ -1,7 +1,7 @@
 import React from "react";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import Logo from "./Logos/Logo";
-import SubscribeCta from "./SubscribeCta";
+import SubscribeCta from "./Ctas/SubscribeCta";
 
 const Header = () => {
   return (
