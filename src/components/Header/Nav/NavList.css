@@ -1,0 +1,7 @@
+#navlist {
+  display: none;
+}
+
+#navlist.open {
+  display: flex;
+}
