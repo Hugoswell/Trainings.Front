@@ -2,8 +2,12 @@
   height: 0.125rem;
 }
 
-#burger-span::before,
-#burger-span::after {
+#burger-span {
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#burger-span::before, #burger-span::after {
   content: "";
   position: absolute;
   top: 0;
@@ -12,10 +16,38 @@
   width: 32px;
   height: 2px;
   background-color: #a0aec0;
-  transform: translateY(-9px);
   border-radius: 2px;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 #burger-span::after {
-  transform: translateY(9px);
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
 }
+
+#burger-span::before {
+  -webkit-transform: translateY(-9px);
+          transform: translateY(-9px);
+}
+
+#burger-span.open {
+  background: transparent;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#burger-span.open::before {
+  -webkit-transform: translateY(0) rotate(45deg);
+          transform: translateY(0) rotate(45deg);
+}
+
+#burger-span.open::after {
+  -webkit-transform: translateY(0) rotate(-45deg);
+          transform: translateY(0) rotate(-45deg);
+}
+/*# sourceMappingURL=Hamburger.css.map */

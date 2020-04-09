@@ -5,7 +5,7 @@ import HeaderContext from "./HeaderContext";
 
 const Header = () => {
   const isLoggedIn = false;
-  const [isDeployed, SetIsDeployed] = useState(false);
+  const [isDeployed, SetIsDeployed] = useState(true);
   const updateHeader = () => {
     SetIsDeployed((isDeployed) => !isDeployed);
   };
