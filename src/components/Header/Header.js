@@ -4,7 +4,7 @@ import NavList from "./Nav/NavList";
 import HeaderContext from "./HeaderContext";
 
 const Header = () => {
-  const isLoggedIn = true;
+  const isLoggedIn = false;
   const [isDeployed, SetIsDeployed] = useState(false);
   const updateHeader = () => {
     SetIsDeployed((isDeployed) => !isDeployed);
