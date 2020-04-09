@@ -4,9 +4,9 @@ import HeaderContext from "../Header/HeaderContext";
 import { useContext } from "react";
 
 const SignUpCta = () => {
-  const { isLoggedIn } = useContext(HeaderContext);
+  const { auth } = useContext(HeaderContext);
 
-  if (!isLoggedIn) {
+  if (!auth) {
     return (
       <div className="mt-2 mr-4">
         <Router>

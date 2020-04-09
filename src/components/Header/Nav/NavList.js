@@ -5,9 +5,9 @@ import HeaderContext from "../HeaderContext";
 import { useContext } from "react";
 
 const NavList = () => {
-  const { isDeployed, isLoggedIn } = useContext(HeaderContext);
+  const { isDeployed, auth } = useContext(HeaderContext);
 
-  if (isLoggedIn) {
+  if (auth) {
     return (
       <div
         className={`${

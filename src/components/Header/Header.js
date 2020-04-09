@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import HeaderTopBar from "./HeaderTopBar/HeaderTopBar";
 import NavList from "./Nav/NavList";
 import HeaderContext from "./HeaderContext";
+import AuthContext from "../../AuthContext";
 
 const Header = () => {
-  const isLoggedIn = false;
+  const { auth } = useContext(AuthContext);
+
   const [isDeployed, SetIsDeployed] = useState(false);
   const updateHeader = () => {
     SetIsDeployed((isDeployed) => !isDeployed);
   };
 
   return (
-    <HeaderContext.Provider value={{ isDeployed, updateHeader, isLoggedIn }}>
+    <HeaderContext.Provider value={{ isDeployed, updateHeader, auth }}>
       <div
         className={`${
           isDeployed ? "h-screen" : "h-16"
