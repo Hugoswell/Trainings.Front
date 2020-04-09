@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import HeaderTopBar from "./HeaderTopBar";
+import HeaderTopBar from "./HeaderTopBar/HeaderTopBar";
 import NavList from "./Nav/NavList";
 import HeaderContext from "./HeaderContext";
 
 const Header = () => {
-  const isLoggedIn = false;
-  const [isDeployed, SetIsDeployed] = useState(true);
+  const isLoggedIn = true;
+  const [isDeployed, SetIsDeployed] = useState(false);
   const updateHeader = () => {
     SetIsDeployed((isDeployed) => !isDeployed);
   };

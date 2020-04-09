@@ -1,7 +1,7 @@
 import React from "react";
-import Hamburger from "../Hamburger/Hamburger";
-import Logo from "../Logos/Logo";
-import SignUpCta from "../Ctas/SignUpCta";
+import Hamburger from "../../Hamburger/Hamburger";
+import Logo from "../../Logos/Logo";
+import SignUpCta from "../../Ctas/SignUpCta";
 
 const HeaderTopBar = () => {
   return (
