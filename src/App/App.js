@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "./Routing/Routes";
+import Routes from "../Routing/Routes";
 import AuthContext from "./AuthContext";
 import Cookies from "js-cookie";
 

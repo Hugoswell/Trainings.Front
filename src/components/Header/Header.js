@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import HeaderTopBar from "./HeaderTopBar/HeaderTopBar";
 import NavList from "./Nav/NavList";
 import HeaderContext from "./HeaderContext";
-import AuthContext from "../../AuthContext";
+import AuthContext from "../../App/AuthContext";
 
 const Header = () => {
   const { auth } = useContext(AuthContext);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Cookies from "js-cookie";
-import AuthContext from "../AuthContext";
+import AuthContext from "../App/AuthContext";
 
 const Dashboard = () => {
   const { setAuth } = useContext(AuthContext);

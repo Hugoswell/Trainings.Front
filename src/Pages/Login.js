@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import AuthContext from "../AuthContext";
+import AuthContext from "../App/AuthContext";
 import Cookies from "js-cookie";
 
 const Login = () => {

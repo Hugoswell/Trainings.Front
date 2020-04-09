@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
 import { useContext } from "react";
-import AuthContext from "../AuthContext";
+import AuthContext from "../App/AuthContext";
 
 //Leave exacly like that, the parameters order is important
 const ProtectedLogin = ({ component: Component, ...rest }) => {
