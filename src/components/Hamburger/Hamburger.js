@@ -7,12 +7,12 @@ const Hamburger = () => {
   const { isDeployed, updateHeader } = useContext(HeaderContext);
 
   return (
-    <div onClick={updateHeader}>
+    <div onClick={updateHeader} className="hamburger ml-6 relative">
       <span
         id="burger-span"
         className={`${
           isDeployed ? "open" : ""
-        } absolute block h-05 w-8 dark-grey-bg rounded-sm ml-6`}
+        } absolute block h-05 w-8 dark-grey-bg rounded-sm`}
       ></span>
     </div>
   );
