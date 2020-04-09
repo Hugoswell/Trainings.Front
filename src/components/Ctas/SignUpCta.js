@@ -8,7 +8,7 @@ const SignUpCta = () => {
 
   if (!isLoggedIn) {
     return (
-      <div>
+      <div className="mt-2 mr-4">
         <Router>
           <Link to="/SignUp" className="gotham-book orange bg-white text-base">
             M'inscrire

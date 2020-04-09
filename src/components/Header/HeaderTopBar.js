@@ -5,7 +5,7 @@ import SignUpCta from "../Ctas/SignUpCta";
 
 const HeaderTopBar = () => {
   return (
-    <div className="h-16 flex items-center justify-around">
+    <div className="h-16 flex items-center justify-between">
       <Hamburger />
       <Logo />
       <SignUpCta isLoggedIn={false} />

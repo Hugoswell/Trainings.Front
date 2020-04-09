@@ -10832,6 +10832,15 @@ video {
 
 /* END COLORS */
 
+/* UTILS */
+
+.absolute-center-horizontaly {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* END UTILS */
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;
