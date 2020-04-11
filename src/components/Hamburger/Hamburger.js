@@ -4,14 +4,14 @@ import HeaderContext from "../Header/HeaderContext";
 import { useContext } from "react";
 
 const Hamburger = () => {
-  const { isDeployed, updateHeader } = useContext(HeaderContext);
+  const { isOpen, handleUpdate } = useContext(HeaderContext);
 
   return (
-    <div onClick={updateHeader} className="hamburger ml-6 relative">
+    <div onClick={handleUpdate} className="hamburger ml-6 relative">
       <span
         id="burger-span"
         className={`${
-          isDeployed && "open"
+          isOpen && "open"
         } absolute block h-05 w-8 dark-grey-bg rounded-sm`}
       ></span>
     </div>

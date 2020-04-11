@@ -7,16 +7,16 @@ import AuthContext from "../../App/AuthContext";
 const Header = () => {
   const { auth } = useContext(AuthContext);
 
-  const [isDeployed, SetIsDeployed] = useState(false);
-  const updateHeader = () => {
-    SetIsDeployed((isDeployed) => !isDeployed);
+  const [isOpen, SetIsOpen] = useState(false);
+  const handleUpdate = () => {
+    SetIsOpen((isOpen) => !isOpen);
   };
 
   return (
-    <HeaderContext.Provider value={{ isDeployed, updateHeader, auth }}>
+    <HeaderContext.Provider value={{ auth, isOpen, handleUpdate }}>
       <div
         className={`${
-          isDeployed ? "h-screen" : "h-16"
+          isOpen ? "h-screen" : "h-16"
         } transition-all duration-700 ease-out fixed top-0 w-full bg-white`}
       >
         <HeaderTopBar />

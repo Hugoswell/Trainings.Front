@@ -5,13 +5,13 @@ import HeaderContext from "../HeaderContext";
 import { useContext } from "react";
 
 const NavList = () => {
-  const { isDeployed, auth } = useContext(HeaderContext);
+  const { auth, isOpen } = useContext(HeaderContext);
 
   if (auth) {
     return (
       <div
         className={`${
-          isDeployed ? "opacity-100 visible" : "opacity-0 invisible"
+          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         } transition-all duration-300 ease-out flex flex-col items-center`}
       >
         <NavLink to="/vision" text="Notre vision" />
@@ -25,7 +25,7 @@ const NavList = () => {
   return (
     <div
       className={`${
-        isDeployed ? "opacity-100 visible" : "opacity-0 invisible"
+        isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       } transition-all duration-300 ease-out flex flex-col items-center`}
     >
       <NavLink to="/signin" text="Me connecter" />
