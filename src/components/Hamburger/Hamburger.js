@@ -11,7 +11,7 @@ const Hamburger = () => {
       <span
         id="burger-span"
         className={`${
-          isDeployed ? "open" : ""
+          isDeployed && "open"
         } absolute block h-05 w-8 dark-grey-bg rounded-sm`}
       ></span>
     </div>
