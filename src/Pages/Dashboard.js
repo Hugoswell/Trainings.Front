@@ -6,7 +6,7 @@ const Dashboard = () => {
   const { setAuth } = useContext(AuthContext);
 
   const handleOnclick = () => {
-    Cookies.remove("token");
+    Cookies.remove("user");
     setAuth(false);
   };
 

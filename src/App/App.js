@@ -5,13 +5,11 @@ import AuthContext from "./AuthContext";
 import Cookies from "js-cookie";
 
 function App() {
-  const [auth, setAuth] = useState(true);
+  const [auth, setAuth] = useState(false);
 
   const ReadCookie = () => {
-    const token = Cookies.get("token");
-    if (token) {
-      setAuth(true);
-    }
+    const token = Cookies.get("user");
+    token ? setAuth(true) : setAuth(false);
   };
 
   useEffect(() => {
