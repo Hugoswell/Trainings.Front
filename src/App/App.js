@@ -5,7 +5,7 @@ import AuthContext from "./AuthContext";
 import Cookies from "js-cookie";
 
 function App() {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(true);
 
   const ReadCookie = () => {
     const token = Cookies.get("token");
