@@ -2,7 +2,6 @@ import React from "react";
 import { useContext } from "react";
 import AuthContext from "../App/AuthContext";
 import Cookies from "js-cookie";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Login = () => {
   const { setAuth } = useContext(AuthContext);
@@ -27,12 +26,6 @@ const Login = () => {
     <div>
       <h1>Welcome !</h1>
       <button onClick={handleOnClick}>Login</button>
-      <br />
-      <Router>
-        <Link to="/dashboard" className="gotham-book orange bg-white text-base">
-          Dashboard
-        </Link>
-      </Router>
     </div>
   );
 };
