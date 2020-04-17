@@ -63,4 +63,14 @@
   transform: translateX(-50%);
 }
 
+.container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-5p {
+  bottom: 5%;
+}
+
 /* END UTILS */
