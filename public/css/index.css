@@ -578,34 +578,6 @@ video {
   height: auto;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -10796,77 +10768,88 @@ video {
   transition-duration: 1000ms;
 }
 
-@font-face {
-  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
-
-  font-family: monserrat-bold;
-}
-
-.monserrat-bold {
-  font-family: monserrat-bold;
-}
+/* FONTS */
 
 @font-face {
-  src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+  src: url("../fonts/GothamRounded-Bold.otf");
 
-  font-family: monserrat-semibold;
+  font-family: gotham-bold;
 }
 
-.monserrat-semibold {
-  font-family: monserrat-semibold;
+.gotham-bold {
+  font-family: gotham-bold;
 }
 
 @font-face {
-  src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+  src: url("../fonts/GothamRounded-Medium.otf");
 
-  font-family: monserrat-medium;
+  font-family: gotham-medium;
 }
 
-.monserrat-medium {
-  font-family: monserrat-medium;
-}
-
-@font-face {
-  src: url("../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf");
-
-  font-family: monserrat-semibold-italic;
-}
-
-.monserrat-semibold-italic {
-  font-family: monserrat-semibold-italic;
+.gotham-medium {
+  font-family: gotham-medium;
 }
 
 @font-face {
-  src: url("../fonts/Montserrat/Montserrat-LightItalic.ttf");
+  src: url("../fonts/GothamRounded-Book.otf");
 
-  font-family: monserrat-light-italic;
+  font-family: gotham-book;
 }
 
-.monserrat-light-italic {
-  font-family: monserrat-light-italic;
+.gotham-book {
+  font-family: gotham-book;
 }
 
 @font-face {
-  src: url("../fonts/Montserrat/Montserrat-Light.ttf");
+  src: url("../fonts/GothamRounded-Light.otf");
 
-  font-family: monserrat-light;
+  font-family: gotham-light;
 }
 
-.monserrat-light {
-  font-family: monserrat-light;
+.gotham-light {
+  font-family: gotham-light;
 }
 
-body {
-  font-family: monserrat-medium;
+/* END FONTS */
+
+/* COLORS */
+
+.dark-grey {
+  color: #a0aec0;
 }
 
-.h-14 {
-  height: 3.5rem;
+.dark-grey-bg {
+  background-color: #a0aec0;
 }
 
-.opacity-65 {
-  opacity: 0.65;
+.light-grey-bg {
+  background-color: #e6e6e6;
 }
+
+.orange {
+  color: #d37200;
+}
+
+/* END COLORS */
+
+/* UTILS */
+
+.absolute-center-horizontaly {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-5p {
+  bottom: 5%;
+}
+
+/* END UTILS */
 
 @media (min-width: 640px) {
   .sm\:sr-only {
