@@ -10822,8 +10822,12 @@ video {
   background-color: #a0aec0;
 }
 
-.light-grey-bg {
+.grey-bg {
   background-color: #e6e6e6;
+}
+
+.light-grey-bg {
+  background-color: #fafafa;
 }
 
 .orange {

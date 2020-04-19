@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
-import ParagraphContext from "../Paragraph/ParagraphContext";
+import React from "react";
 
-const Paragraph = () => {
-  const { text } = useContext(ParagraphContext);
-  let newText = text.split("\n").map((item, i) => {
+const Paragraph = (props) => {
+  const text = props.text;
+
+  let formatedText = text.split("$").map((item, i) => {
     return <p key={i}>{item}</p>;
   });
 
-  return <div className="dark-grey gotham-medium mt-6">{newText}</div>;
+  return (
+    <div className={`${props.big && "text-lg"} dark-grey gotham-medium mt-6`}>
+      {formatedText}
+    </div>
+  );
 };
 
 export default Paragraph;

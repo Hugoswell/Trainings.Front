@@ -7,7 +7,7 @@ import CrossfitImg from "../../img/crossfit-F.jpg";
 
 const SportGrid = () => {
   return (
-    <div class="mt-12 grid grid-cols-2 gap-8">
+    <div className="mt-12 mb-10 grid grid-cols-2 gap-8">
       <SportVisual
         img={MusculationImg}
         alt="image musculation"

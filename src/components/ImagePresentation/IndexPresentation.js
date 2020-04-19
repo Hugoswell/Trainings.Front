@@ -9,9 +9,11 @@ const IndexPresentation = () => {
         src={IndexPresentationImage}
         alt="Trainings image de presentation"
       />
-      <h1 className="absolute bottom-5p text-xl text-center text-white gotham-medium">
-        Des entrainements adaptés à votre demande et besoin
-      </h1>
+      <div className="w-3/4 absolute absolute-center-horizontaly bottom-5p">
+        <h1 className="text-xl text-center text-white gotham-medium">
+          Des entrainements adaptés à votre demande et besoin
+        </h1>
+      </div>
     </div>
   );
 };
