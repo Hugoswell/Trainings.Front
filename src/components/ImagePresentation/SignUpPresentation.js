@@ -7,7 +7,7 @@ const SignUpPresentation = () => {
       <img
         className="opacity-75"
         src={SignUpPresentationImage}
-        alt="Trainings image de presentation"
+        alt="Inscription presentation"
       />
       <div className="w-4/5 absolute absolute-center-horizontaly bottom-5p">
         <h1 className="text-xl text-center text-white gotham-medium">
