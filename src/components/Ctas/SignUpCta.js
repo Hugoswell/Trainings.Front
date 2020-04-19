@@ -10,7 +10,7 @@ const SignUpCta = () => {
     return (
       <div className="mt-2 mr-4">
         <Router>
-          <Link to="/SignUp" className="gotham-book orange bg-white text-base">
+          <Link to="/signup" className="gotham-book orange bg-white text-base">
             M'inscrire
           </Link>
         </Router>
