@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "../Components/Header/Header";
-import IndexPresentation from "../Components/ImagePresentation/IndexPresentation";
-import ParagraphContext from "../Components/Paragraph/ParagraphContext";
-import Paragraph from "../Components/Paragraph/Paragraph";
+import Header from "../components/Header/Header";
+import IndexPresentation from "../components/ImagePresentation/IndexPresentation";
+import ParagraphContext from "../components/Paragraph/ParagraphContext";
+import Paragraph from "../components/Paragraph/Paragraph";
 
 const Index = () => {
   return (
