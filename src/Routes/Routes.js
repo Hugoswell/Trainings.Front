@@ -10,8 +10,8 @@ import SignUp from "../Pages/SignUp";
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/" exact component={Index} />
-      <Route path="/signup" exact component={SignUp} />
+      <Route exact path="/" component={Index} />
+      <Route exact path="/signup" component={SignUp} />
       <ProtectedLogin path="/login" component={Login} />
       <ProtectedRoute path="/dashboard" component={Dashboard} />
     </Switch>

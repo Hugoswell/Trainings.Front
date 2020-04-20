@@ -23,7 +23,7 @@ const Index = () => {
                   Ne vous vous prenez plus la tête, laissez nous faire."
         />
         <Question
-          question="Comment marche votre solution ?"
+          question="Comment marche notre solution ?"
           answer="Notre solution est une IA (intelligence artificielle) qui génère des entrainements adaptés à vos informations personnelles (type d’entrainement, objectif, si vous travaillez à poids de corps etc…)"
         />
       </div>

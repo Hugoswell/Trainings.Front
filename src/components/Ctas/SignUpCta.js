@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HeaderContext from "../Header/HeaderContext";
 import { useContext } from "react";
 
@@ -9,11 +9,9 @@ const SignUpCta = () => {
   if (!auth) {
     return (
       <div className="mt-2 mr-4">
-        <Router>
-          <Link to="/signup" className="gotham-book orange bg-white text-base">
-            M'inscrire
-          </Link>
-        </Router>
+        <Link to="/signup" className="gotham-book orange bg-white text-base">
+          M'inscrire
+        </Link>
       </div>
     );
   }
