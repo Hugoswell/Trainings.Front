@@ -2,12 +2,23 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import FormInput from "./FormInput/FormInput";
 import Cta from "../Ctas/Cta";
+import Axios from "axios";
 
 const SignUpForm = () => {
   const { handleSubmit, register, errors } = useForm();
+  const server = "https://trainings-api-uat.azurewebsites.net";
+  const controller = "/auth";
+  const action = "/signup";
 
   const onSubmit = (values) => {
-    console.log(values);
+    const url = server + controller + action;
+    Axios.post(url, values)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
