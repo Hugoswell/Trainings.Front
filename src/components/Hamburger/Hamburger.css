@@ -30,13 +30,13 @@
 }
 
 .hamburger #burger-span::after {
-  -webkit-transform: translateY(9px);
-          transform: translateY(9px);
+  -webkit-transform: translateY(11px);
+          transform: translateY(11px);
 }
 
 .hamburger #burger-span::before {
-  -webkit-transform: translateY(-9px);
-          transform: translateY(-9px);
+  -webkit-transform: translateY(-11px);
+          transform: translateY(-11px);
 }
 
 .hamburger #burger-span.open {

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import FormInput from "./FormInput/FormInput";
+import Cta from "../Ctas/Cta";
 
 const SignUpForm = () => {
   const { handleSubmit, register, errors } = useForm();
@@ -65,7 +66,7 @@ const SignUpForm = () => {
         {errors.password && errors.password.message}
       </span>
 
-      <button type="submit">Submit</button>
+      <Cta text="REJOINDRE TRAININGS" />
     </form>
   );
 };

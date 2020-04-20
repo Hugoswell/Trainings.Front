@@ -24,11 +24,11 @@
     }
 
     &::after {
-      transform: translateY(9px);
+      transform: translateY(11px);
     }
 
     &::before {
-      transform: translateY(-9px);
+      transform: translateY(-11px);
     }
 
     &.open {
