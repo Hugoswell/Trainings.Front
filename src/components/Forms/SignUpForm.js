@@ -12,6 +12,7 @@ const SignUpForm = () => {
 
   const onSubmit = (values) => {
     const url = server + controller + action;
+    console.log(values);
     Axios.post(url, values)
       .then((response) => {
         console.log(response);
@@ -29,52 +30,53 @@ const SignUpForm = () => {
       <FormInput
         register={register}
         type="text"
-        name="firstname"
+        name="FirstName"
         placeholder="Prénom*"
         required="Prénom requis"
         message="Prénom invalide"
         validation={/^[A-Z]+$/i}
       />
       <span className="mb-6 text-red-500 gotham-book">
-        {errors.firstname && errors.firstname.message}
+        {errors.FirstName && errors.FirstName.message}
       </span>
 
       <FormInput
         register={register}
         type="text"
-        name="lastname"
+        name="LastName"
         placeholder="Nom*"
         required="Nom requis"
         message="Nom invalide"
         validation={/^[A-Z]+$/i}
       />
       <span className="mb-6 text-red-500 gotham-book">
-        {errors.lastname && errors.lastname.message}
+        {errors.LastName && errors.LastName.message}
       </span>
 
       <FormInput
         register={register}
-        name="email"
+        type="email"
+        name="Email"
         placeholder="Email*"
         required="Email requis"
         message="Email invalide"
         validation={/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i}
       />
       <span className="mb-6 text-red-500 gotham-book">
-        {errors.email && errors.email.message}
+        {errors.Email && errors.Email.message}
       </span>
 
       <FormInput
         register={register}
         type="password"
-        name="password"
+        name="Password"
         placeholder="Mot de passe*"
         required="Mot de passe requis"
         message="8 à 30 caractères"
         validation={/^[A-Z0-9.@&(!)_%+-^¨$*=/:]{8,30}$/i}
       />
       <span className="mb-6 text-red-500 gotham-book">
-        {errors.password && errors.password.message}
+        {errors.Password && errors.Password.message}
       </span>
 
       <Cta text="REJOINDRE TRAININGS" />
