@@ -1,24 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import FormInput from "./FormInput/FormInput";
 import Cta from "../Ctas/Cta";
 import Axios from "axios";
 import UrlBuilder from "../Helpers/UrlBuilder";
 import { useHistory } from "react-router-dom";
+import Cookies from "js-cookie";
+import AuthContext from "../../App/AuthContext";
 
 const SignUpForm = () => {
   const { handleSubmit, register, errors } = useForm();
+  const { setAuth } = useContext(AuthContext);
+  const history = useHistory();
+
+  const SignUpCallback = (response) => {
+    Cookies.set(
+      "user",
+      { JwtToken: response.data.jwtToken },
+      {
+        expires: 1,
+      }
+    );
+    setAuth(true);
+    history.push("/dashboard");
+  };
+
   const url = UrlBuilder(
     "https://trainings-api-uat.azurewebsites.net",
     "/auth",
     "/signup"
   );
-  const history = useHistory();
 
   const onSubmit = (values) => {
     Axios.post(url, values)
       .then((response) => {
-        history.push("/login");
+        SignUpCallback(response);
       })
       .catch((error) => {
         console.log(error);
