@@ -18,7 +18,6 @@ const SignUpForm = () => {
   const onSubmit = (values) => {
     Axios.post(url, values)
       .then((response) => {
-        console.log(response);
         history.push("/login");
       })
       .catch((error) => {
