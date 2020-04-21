@@ -3,19 +3,23 @@ import { useForm } from "react-hook-form";
 import FormInput from "./FormInput/FormInput";
 import Cta from "../Ctas/Cta";
 import Axios from "axios";
+import UrlBuilder from "../Helpers/UrlBuilder";
+import { useHistory } from "react-router-dom";
 
 const SignUpForm = () => {
   const { handleSubmit, register, errors } = useForm();
-  const server = "https://trainings-api-uat.azurewebsites.net";
-  const controller = "/auth";
-  const action = "/signup";
+  const url = UrlBuilder(
+    "https://trainings-api-uat.azurewebsites.net",
+    "/auth",
+    "/signup"
+  );
+  const history = useHistory();
 
   const onSubmit = (values) => {
-    const url = server + controller + action;
-    console.log(values);
     Axios.post(url, values)
       .then((response) => {
         console.log(response);
+        history.push("/login");
       })
       .catch((error) => {
         console.log(error);
