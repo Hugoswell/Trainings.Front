@@ -66,6 +66,10 @@
 
 /* UTILS */
 
+.opacity-90 {
+  opacity: 0.9;
+}
+
 .absolute-center-horizontaly {
   left: 50%;
   transform: translateX(-50%);

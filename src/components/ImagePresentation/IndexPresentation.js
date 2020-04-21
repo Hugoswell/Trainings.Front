@@ -5,7 +5,7 @@ const IndexPresentation = () => {
   return (
     <div className="relative mt-16">
       <img
-        className="opacity-75"
+        className="opacity-90"
         src={IndexPresentationImage}
         alt="Trainings presentation"
       />
