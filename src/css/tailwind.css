@@ -58,9 +58,17 @@
   color: #d37200;
 }
 
+.orange-bg {
+  background-color: #d37200;
+}
+
 /* END COLORS */
 
 /* UTILS */
+
+.opacity-90 {
+  opacity: 0.9;
+}
 
 .absolute-center-horizontaly {
   left: 50%;
@@ -75,6 +83,10 @@
 
 .bottom-5p {
   bottom: 5%;
+}
+
+.h-14 {
+  height: 3.5rem;
 }
 
 /* END UTILS */

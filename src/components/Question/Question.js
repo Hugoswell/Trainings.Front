@@ -1,5 +1,4 @@
 import React from "react";
-import { PreviousMap } from "postcss";
 
 const Question = (props) => {
   return (

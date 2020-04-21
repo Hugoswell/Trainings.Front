@@ -5,7 +5,6 @@
 .hamburger {
   width: 32px;
   height: 24px;
-  background-color: blue;
 
   #burger-span {
     transition: all 0.5s ease-out;
@@ -25,11 +24,11 @@
     }
 
     &::after {
-      transform: translateY(9px);
+      transform: translateY(11px);
     }
 
     &::before {
-      transform: translateY(-9px);
+      transform: translateY(-11px);
     }
 
     &.open {
