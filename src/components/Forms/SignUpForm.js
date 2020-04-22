@@ -16,7 +16,7 @@ const SignUpForm = () => {
   const SignUpCallback = (response) => {
     Cookies.set(
       "user",
-      { JwtToken: response.data.jwtToken },
+      { JwtToken: response.data },
       {
         expires: 1,
       }
