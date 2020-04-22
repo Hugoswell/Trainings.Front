@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,YAAY,AAAA,aAAa,CAAC;EACxB,OAAO,EAAE,GAAG;CACb",
-    "sources": [
-        "FormInput.scss"
-    ],
-    "names": [],
-    "file": "FormInput.css"
-}

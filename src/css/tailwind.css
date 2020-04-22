@@ -90,3 +90,20 @@
 }
 
 /* END UTILS */
+
+/* FORMS */
+
+.placeholder::-webkit-input-placeholder {
+  opacity: 70%;
+}
+.placeholder:-ms-input-placeholder {
+  opacity: 70%;
+}
+.placeholder::-ms-input-placeholder {
+  opacity: 70%;
+}
+.placeholder::placeholder {
+  opacity: 70%;
+}
+
+/* END FORMS */
