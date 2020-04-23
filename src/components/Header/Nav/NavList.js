@@ -3,9 +3,15 @@ import NavLink from "./NavLink";
 import NavHorizontalSeparator from "./NavHorizontalSeparator";
 import HeaderContext from "../HeaderContext";
 import { useContext } from "react";
+import Cookies from "js-cookie";
 
 const NavList = () => {
-  const { auth, isOpen } = useContext(HeaderContext);
+  const { auth, setAuth, isOpen, handleUpdate } = useContext(HeaderContext);
+  const handleDisconnect = () => {
+    Cookies.remove("user");
+    setAuth(false);
+    handleUpdate();
+  };
 
   return (
     <div
@@ -19,7 +25,14 @@ const NavList = () => {
       <NavLink to="/contact" text="Contact" />
       <NavLink to="/faq" text="FAQ" />
       {auth && <NavHorizontalSeparator />}
-      {auth && <NavLink to="/signout" text="Me déconnecter" />}
+      {auth && (
+        <button
+          className="gotham-medium dark-grey text-lg mt-6"
+          onClick={handleDisconnect}
+        >
+          Me déconnecter
+        </button>
+      )}
     </div>
   );
 };
