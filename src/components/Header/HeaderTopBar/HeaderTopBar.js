@@ -8,7 +8,7 @@ const HeaderTopBar = () => {
     <div className="h-16 flex items-center justify-between">
       <Hamburger />
       <Logo />
-      <SignUpCta isLoggedIn={false} />
+      <SignUpCta />
     </div>
   );
 };

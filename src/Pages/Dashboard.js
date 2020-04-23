@@ -1,20 +1,11 @@
-import React, { useContext } from "react";
-import Cookies from "js-cookie";
-import AuthContext from "../App/AuthContext";
+import React from "react";
+import Header from "../components/Header/Header";
 
 const Dashboard = () => {
-  const { setAuth } = useContext(AuthContext);
-
-  const handleOnclick = () => {
-    Cookies.remove("user");
-    setAuth(false);
-  };
-
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <button onClick={handleOnclick}>Logout</button>
-    </div>
+    <>
+      <Header />
+    </>
   );
 };
 

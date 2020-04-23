@@ -5,15 +5,14 @@ import HeaderContext from "./HeaderContext";
 import AuthContext from "../../App/AuthContext";
 
 const Header = () => {
-  const { auth } = useContext(AuthContext);
-
+  const { auth, setAuth } = useContext(AuthContext);
   const [isOpen, SetIsOpen] = useState(false);
   const handleUpdate = () => {
     SetIsOpen((isOpen) => !isOpen);
   };
 
   return (
-    <HeaderContext.Provider value={{ auth, isOpen, handleUpdate }}>
+    <HeaderContext.Provider value={{ auth, setAuth, isOpen, handleUpdate }}>
       <div
         className={`${
           isOpen ? "h-screen" : "h-16"
