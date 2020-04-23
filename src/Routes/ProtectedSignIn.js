@@ -4,7 +4,7 @@ import { useContext } from "react";
 import AuthContext from "../App/AuthContext";
 
 //Leave exacly like that, the parameters order is important
-const ProtectedLogin = ({ component: Component, ...rest }) => {
+const ProtectedSignIn = ({ component: Component, ...rest }) => {
   const { auth } = useContext(AuthContext);
 
   return (
@@ -15,4 +15,4 @@ const ProtectedLogin = ({ component: Component, ...rest }) => {
   );
 };
 
-export default ProtectedLogin;
+export default ProtectedSignIn;
