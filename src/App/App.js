@@ -8,8 +8,8 @@ function App() {
   const [auth, setAuth] = useState(false);
 
   const ReadCookie = () => {
-    const token = Cookies.get("user");
-    token ? setAuth(true) : setAuth(false);
+    const cookie = Cookies.get("user");
+    cookie ? setAuth(true) : setAuth(false);
   };
 
   useEffect(() => {
