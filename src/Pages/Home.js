@@ -5,7 +5,7 @@ import Paragraph from "../components/Paragraph/Paragraph";
 import SportGrid from "../components/Grid/SportGrid";
 import Question from "../components/Question/Question";
 
-const Index = () => {
+const Home = () => {
   return (
     <>
       <Header />
@@ -31,4 +31,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Home;
