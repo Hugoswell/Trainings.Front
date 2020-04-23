@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 import AuthContext from "../../App/AuthContext";
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const { handleSubmit, register, errors } = useForm();
   const { setAuth } = useContext(AuthContext);
   const history = useHistory();
@@ -28,7 +28,7 @@ const SignUpForm = () => {
   const url = UrlBuilder(
     "https://trainings-api-uat.azurewebsites.net",
     "/auth",
-    "/signup"
+    "/signin"
   );
 
   const onSubmit = (values) => {
@@ -44,34 +44,8 @@ const SignUpForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="container-85 mt-8 flex flex-col"
+      className="container-85 mt-24 flex flex-col"
     >
-      <FormInput
-        register={register}
-        type="text"
-        name="FirstName"
-        placeholder="Prénom*"
-        required="Prénom requis"
-        message="Prénom invalide"
-        validation={/^[A-Z]+$/i}
-      />
-      <span className="mb-6 text-red-500 gotham-book">
-        {errors.FirstName && errors.FirstName.message}
-      </span>
-
-      <FormInput
-        register={register}
-        type="text"
-        name="LastName"
-        placeholder="Nom*"
-        required="Nom requis"
-        message="Nom invalide"
-        validation={/^[A-Z]+$/i}
-      />
-      <span className="mb-6 text-red-500 gotham-book">
-        {errors.LastName && errors.LastName.message}
-      </span>
-
       <FormInput
         register={register}
         type="email"
@@ -98,9 +72,9 @@ const SignUpForm = () => {
         {errors.Password && errors.Password.message}
       </span>
 
-      <Cta text="REJOINDRE TRAININGS" />
+      <Cta text="ME CONNECTER" />
     </form>
   );
 };
 
-export default SignUpForm;
+export default SignInForm;
