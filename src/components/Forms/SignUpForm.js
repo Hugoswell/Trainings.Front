@@ -25,11 +25,7 @@ const SignUpForm = () => {
     history.push("/dashboard");
   };
 
-  const url = UrlBuilder(
-    "https://trainings-api-uat.azurewebsites.net",
-    "/auth",
-    "/signup"
-  );
+  const url = UrlBuilder("https://api.trainings.agency", "/auth", "/signup");
 
   const onSubmit = (values) => {
     Axios.post(url, values)

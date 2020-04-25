@@ -25,11 +25,7 @@ const SignInForm = () => {
     history.push("/dashboard");
   };
 
-  const url = UrlBuilder(
-    "https://trainings-api-uat.azurewebsites.net",
-    "/auth",
-    "/signin"
-  );
+  const url = UrlBuilder("https://api.trainings.agency", "/auth", "/signin");
 
   const onSubmit = (values) => {
     Axios.post(url, values)
@@ -50,7 +46,7 @@ const SignInForm = () => {
         register={register}
         type="email"
         name="Email"
-        placeholder="Email*"
+        placeholder="Email"
         required="Email requis"
         message="Email invalide"
         validation={/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i}
@@ -63,7 +59,7 @@ const SignInForm = () => {
         register={register}
         type="password"
         name="Password"
-        placeholder="Mot de passe*"
+        placeholder="Mot de passe"
         required="Mot de passe requis"
         message="8 à 30 caractères"
         validation={/^[A-Z0-9.@&(!)_%+-^¨$*=/:]{8,30}$/i}
