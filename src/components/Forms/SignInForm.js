@@ -12,7 +12,7 @@ import Loader from "../Loader/Loader"
 const SignInForm = () => {
   const { handleSubmit, register, errors } = useForm();
   const { setAuth } = useContext(AuthContext);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   const SignUpCallback = (response) => {
@@ -74,6 +74,7 @@ const SignInForm = () => {
       </span>
 
       <Loader loading={loading}/>
+      {loading && <div className="mb-6"></div> }
       <Cta text="ME CONNECTER" />
     </form>
   );
