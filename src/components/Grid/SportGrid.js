@@ -7,15 +7,18 @@ import CrossfitImg from "../../img/crossfit-F.jpg";
 
 const SportGrid = () => {
   return (
-    <div className="mt-12 mb-10 grid grid-cols-2 gap-4">
-      <SportVisual
-        img={MusculationImg}
-        alt="image musculation"
-        text="Musculation"
-      />
-      <SportVisual img={CardioImg} alt="image cardio" text="Cardio" />
-      <SportVisual img={HIITImg} alt="image HIIT" text="HIIT" />
-      <SportVisual img={CrossfitImg} alt="image crossfit" text="Crossfit" />
+    <div className="mt-12">
+      <h2 className="gotham-medium text-lg orange">Les sports que nous proposons</h2>
+      <div className="mt-6 mb-10 grid grid-cols-2 gap-4">
+        <SportVisual
+          img={MusculationImg}
+          alt="image musculation"
+          text="Musculation"
+        />
+        <SportVisual img={CardioImg} alt="image cardio" text="Cardio" />
+        <SportVisual img={HIITImg} alt="image HIIT" text="HIIT" />
+        <SportVisual img={CrossfitImg} alt="image crossfit" text="Crossfit" />
+      </div>
     </div>
   );
 };
