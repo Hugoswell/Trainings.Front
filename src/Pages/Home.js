@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import IndexPresentation from "../components/ImagePresentation/IndexPresentation";
-import Paragraph from "../components/Paragraph/Paragraph";
 import SportGrid from "../components/Grid/SportGrid";
 import Question from "../components/Question/Question";
 import Features from "../components/Features/Features"
@@ -13,10 +12,6 @@ const Home = () => {
       <IndexPresentation />
       <div className="container-85">
         <Features />
-        <Paragraph
-          big={true}
-          text="Reprendre le sport,$ Améliorer sa santé,$ Gagner en masse musculaire.$ Peu importe votre objectif,$ nous vous y emmènerons."
-        />
         <SportGrid />
         <Question
           question="Comment nous voyons les choses ?"

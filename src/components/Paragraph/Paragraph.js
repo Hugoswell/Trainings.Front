@@ -8,7 +8,7 @@ const Paragraph = (props) => {
   });
 
   return (
-    <div className={`${props.big && "text-lg"} dark-grey gotham-medium mt-6`}>
+    <div className={`${props.big && "text-lg"} dark-grey gotham-medium mt-8`}>
       {formatedText}
     </div>
   );
