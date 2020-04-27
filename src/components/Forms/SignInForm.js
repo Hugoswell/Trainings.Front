@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import FormInput from "./FormInput/FormInput";
 import Cta from "../Ctas/Cta";
@@ -7,10 +7,12 @@ import UrlBuilder from "../Helpers/UrlBuilder";
 import { useHistory } from "react-router-dom";
 import Cookies from "js-cookie";
 import AuthContext from "../../App/AuthContext";
+import Loader from "../Loader/Loader"
 
 const SignInForm = () => {
   const { handleSubmit, register, errors } = useForm();
   const { setAuth } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   const SignUpCallback = (response) => {
@@ -28,11 +30,14 @@ const SignInForm = () => {
   const url = UrlBuilder("https://api.trainings.agency", "/auth", "/signin");
 
   const onSubmit = (values) => {
+    setLoading(true);
     Axios.post(url, values)
       .then((response) => {
+        setLoading(false);
         SignUpCallback(response);
       })
       .catch((error) => {
+        setLoading(false);
         console.log(error);
       });
   };
@@ -68,6 +73,8 @@ const SignInForm = () => {
         {errors.Password && errors.Password.message}
       </span>
 
+      <Loader loading={loading}/>
+      {loading && <div className="mb-6"></div> }
       <Cta text="ME CONNECTER" />
     </form>
   );

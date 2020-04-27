@@ -21,7 +21,7 @@ function App() {
       <AuthContext.Provider value={{ auth, setAuth }}>
         <Router>
           <Routes />
-        </Router>
+        </Router>          
       </AuthContext.Provider>
     </div>
   );
