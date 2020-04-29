@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <div className="absolute absolute-center-horizontaly">
       <Router>
-        <Link to="/Home">
+        <Link to="/">
           <img src={LogoImg} alt="Trainings logo" className="h-12" />
         </Link>
       </Router>
