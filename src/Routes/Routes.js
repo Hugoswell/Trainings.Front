@@ -7,6 +7,7 @@ import SignUp from "../Pages/SignUp";
 import SignIn from "../Pages/SignIn";
 import Dashboard from "../Pages/Dashboard";
 import Trainings from "../Pages/Trainings";
+import Profile from "../Pages/Profile";
 
 const Routes = () => {
   return (
@@ -16,6 +17,7 @@ const Routes = () => {
       <ProtectedSignIn exact path="/signin" component={SignIn} />
       <ProtectedRoute exact path="/dashboard" component={Dashboard} />
       <ProtectedRoute exact path="/trainings" component={Trainings} />
+      <ProtectedRoute exact path="/profile" component={Profile} />
     </Switch>
   );
 };
