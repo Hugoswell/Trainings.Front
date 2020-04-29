@@ -16,7 +16,7 @@ const Header = () => {
       <div
         className={`${
           isOpen ? "h-screen" : "h-16"
-        } transition-all duration-700 ease-out fixed top-0 w-full bg-white z-10`}
+        } transition-all duration-700 ease-out fixed top-0 w-full bg-white z-20`}
       >
         <HeaderTopBar />
         <NavList />

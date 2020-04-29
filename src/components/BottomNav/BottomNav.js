@@ -7,7 +7,7 @@ const BottomNav = () => {
     const [selected] = useState(`${location.pathname}`);
 
     return (
-        <ul className="fixed bottom-0 w-full h-16 overflow-y-hidden overflow-x-auto whitespace-no-wrap">            
+        <ul className="fixed bottom-0 w-full h-16 overflow-y-hidden overflow-x-auto whitespace-no-wrap z-10">            
             <Link to="/dashboard" className="inline-block h-full w-1/4">                
                 <svg className="my-0 mx-auto mt-2" xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21"><g transform="translate(-32 -152)" className={`${selected === "/dashboard" ? "orange-fill" : "dark-grey-fill"}`}><g transform="translate(26 146)"><rect width="9" height="12" rx="1" transform="translate(17 6)"/><rect width="9" height="12" rx="1" transform="translate(6 15)"/><rect width="9" height="8" rx="1" transform="translate(6 6)"/><rect width="9" height="8" rx="1" transform="translate(17 19)"/></g></g></svg>
                 <p className={`${selected === "/dashboard" ? "orange" : "dark-grey"} text-xs text-center mt-2`}>Tableau de bord</p>                
