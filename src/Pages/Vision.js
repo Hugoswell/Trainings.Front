@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header/Header";
 import BottomNav from "../components/BottomNav/BottomNav"
 import VisionPresentation from "../components/ImagePresentation/VisionPresentation"
-import Paragraph from "../components/Paragraph/Paragraph"
 
 const Vision = () => {
   return (
