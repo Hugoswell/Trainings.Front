@@ -4,6 +4,7 @@ import IndexPresentation from "../components/ImagePresentation/IndexPresentation
 import SportGrid from "../components/Grid/SportGrid";
 import Question from "../components/Question/Question";
 import Features from "../components/Features/Features"
+import BottomNav from "../components/BottomNav/BottomNav"
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
           answer="Notre solution est une IA (intelligence artificielle) qui génère des entrainements adaptés à vos informations personnelles (type d’entrainement, objectif, si vous travaillez à poids de corps etc…)"
         />
       </div>
+      <BottomNav/>
     </>
   );
 };
