@@ -62,6 +62,14 @@
   background-color: #d37200;
 }
 
+.orange-fill {
+  fill: #d37200!important;
+}
+
+.dark-grey-fill {
+  fill: #a0aec0!important;
+}
+
 /* END COLORS */
 
 /* UTILS */
