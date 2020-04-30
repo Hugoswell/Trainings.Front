@@ -6,6 +6,8 @@ const Trainings = () => {
   return (
     <>
       <Header />
+
+      <div className="h-16"></div>
       <BottomNav/>
     </>
   );

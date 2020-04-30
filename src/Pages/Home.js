@@ -25,6 +25,7 @@ const Home = () => {
           answer="Notre solution est une IA (intelligence artificielle) qui génère des entrainements adaptés à vos informations personnelles (type d’entrainement, objectif, si vous travaillez à poids de corps etc…)"
         />
       </div>
+      <div className="h-16"></div>
       <BottomNav/>
     </>
   );
