@@ -27,7 +27,7 @@ const SignUpForm = () => {
     history.push("/dashboard");
   };
 
-  const url = UrlBuilder("https://app-api-uat-trainings.azurewebsites.net", "/auth", "/signup");
+  const url = UrlBuilder("https://api.trainings.agency", "/auth", "/signup");
 
   const onSubmit = (values) => {
     setLoading(true);
@@ -38,7 +38,7 @@ const SignUpForm = () => {
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
+        console.log(error.message);
       });
   };
 
