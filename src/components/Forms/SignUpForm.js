@@ -27,7 +27,7 @@ const SignUpForm = () => {
     history.push("/dashboard");
   };
 
-  const url = UrlBuilder("https://api.trainings.agency", "/auth", "/signup");
+  const url = UrlBuilder("app-api-uat-trainings.azurewebsites.net", "/auth", "/signup");
 
   const onSubmit = (values) => {
     setLoading(true);
