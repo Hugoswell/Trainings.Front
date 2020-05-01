@@ -18,7 +18,7 @@ const Home = () => {
           question="Comment nous voyons les choses ?"
           answer="Nous pensons qu’il est important de varier ses entrainements de sport. Tout d’abord pour éviter la routine, mais également pour progresser en permanence.
                   Nous sommes donc là pour vous apporter des entrainements variés, adaptés à votre demande et à la fréquence que vous souhaitez.
-                  Ne vous vous prenez plus la tête, laissez nous faire."
+                  Ne vous prenez plus la tête, laissez nous faire."
         />
         <Question
           question="Comment marche notre solution ?"
