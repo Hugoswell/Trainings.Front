@@ -62,6 +62,10 @@
   background-color: #d37200;
 }
 
+.light-orange-bg {
+  background-color: rgba(255, 206, 175, 0.3);
+}
+
 .orange-fill {
   fill: #d37200!important;
 }

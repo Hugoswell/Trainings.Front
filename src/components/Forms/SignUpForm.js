@@ -15,10 +15,10 @@ const SignUpForm = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  const SignUpCallback = (response) => {
+  const SignUpCallback = (data) => {
     Cookies.set(
-      "user",
-      { JwtToken: response.data },
+      "JWT",
+      data,
       {
         expires: 1,
       }
@@ -34,7 +34,7 @@ const SignUpForm = () => {
     Axios.post(url, values)
       .then((response) => {
         setLoading(false);
-        SignUpCallback(response);
+        SignUpCallback(response.data);
       })
       .catch((error) => {
         setLoading(false);
