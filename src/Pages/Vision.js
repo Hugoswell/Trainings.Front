@@ -15,7 +15,7 @@ const Vision = () => {
           Tout d’abord pour éviter la routine, mais également pour progresser en permanence.
           Nous sommes donc là pour vous apporter des entrainements variés, 
           adaptés à votre demande et à la fréquence que vous souhaitez.
-          Ne vous vous prenez plus la tête, laissez nous faire.
+          Ne vous prenez plus la tête, laissez nous faire.
         </p>
       </div>
       <div className="h-16"></div>
