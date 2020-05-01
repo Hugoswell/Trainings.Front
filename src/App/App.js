@@ -8,7 +8,7 @@ function App() {
   const [auth, setAuth] = useState(false);
 
   const ReadCookie = () => {
-    const cookie = Cookies.get("user");
+    const cookie = Cookies.get("JWT");
     cookie ? setAuth(true) : setAuth(false);
   };
 

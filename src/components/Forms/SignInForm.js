@@ -15,10 +15,10 @@ const SignInForm = () => {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
 
-  const SignUpCallback = (response) => {
+  const SignUpCallback = (data) => {
     Cookies.set(
-      "user",
-      { JwtToken: response.data },
+      "JWT",
+      data,
       {
         expires: 1,
       }
@@ -27,18 +27,20 @@ const SignInForm = () => {
     history.push("/dashboard");
   };
 
-  const url = UrlBuilder("https://api.trainings.agency", "/auth", "/signin");
+  let url = UrlBuilder("https://api.trainings.agency", "/auth", "/signin");
 
   const onSubmit = (values) => {
     setLoading(true);
-    Axios.post(url, values)
+    url += `?Email=${values.Email}&Password=${values.Password}`
+
+    Axios.get(url)
       .then((response) => {
         setLoading(false);
-        SignUpCallback(response);
+        SignUpCallback(response.data);
       })
       .catch((error) => {
         setLoading(false);
-        console.log(error);
+        console.log(error.data);
       });
   };
 

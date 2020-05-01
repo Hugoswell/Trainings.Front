@@ -8,7 +8,7 @@ import Cookies from "js-cookie";
 const NavList = () => {
   const { auth, setAuth, isOpen, handleUpdate } = useContext(HeaderContext);
   const handleDisconnect = () => {
-    Cookies.remove("user");
+    Cookies.remove("JWT");
     setAuth(false);
     handleUpdate();
   };
