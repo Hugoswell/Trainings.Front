@@ -10,6 +10,7 @@ import Trainings from "../Pages/Trainings";
 import Profile from "../Pages/Profile";
 import Vision from "../Pages/Vision";
 import Faq from "../Pages/Faq";
+import Contact from "../Pages/Contact";
 
 const Routes = () => {
   return (
@@ -18,6 +19,7 @@ const Routes = () => {
       <Route exact path="/signup" component={SignUp} />
       <Route exact path="/vision" component={Vision} />
       <Route exact path="/faq" component={Faq} />
+      <Route exact path="/contact" component={Contact} />
       <ProtectedSignIn exact path="/signin" component={SignIn} />
       <ProtectedRoute exact path="/dashboard" component={Dashboard} />
       <ProtectedRoute exact path="/trainings" component={Trainings} />
