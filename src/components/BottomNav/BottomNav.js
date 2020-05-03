@@ -6,9 +6,9 @@ import AuthContext from "../../App/AuthContext"
 const BottomNav = () => {
     const { auth } = useContext(AuthContext);
     const location = useLocation();
-    const [pathname] = useState(`${location.pathname}`);
-
+    const [pathname] = useState(`${location.pathname}`);    
     if (auth) {
+        
         return (
             <ul className="fixed bottom-0 w-full h-16 bg-white overflow-y-hidden overflow-x-auto whitespace-no-wrap z-10">            
                 <Link to="/dashboard" className="inline-block h-full w-27">                
@@ -24,8 +24,8 @@ const BottomNav = () => {
                     <p className={`${pathname === "/stats" ? "orange" : "dark-grey"} text-xs text-center mt-2`}>Statistiques</p>                
                 </Link>
                 <Link to="/profile/preferences" className="inline-block h-full w-23">                
-                <svg className="my-0 mx-auto mt-2" xmlns="http://www.w3.org/2000/svg" width="15" height="18.913" viewBox="0 0 15 18.913"><g transform="translate(-138 -111)" className={`${pathname === "/profile" ? "orange-fill" : "dark-grey-fill"}`}><path d="M24,20.3a1.927,1.927,0,0,1-1.467,1.878,25.082,25.082,0,0,1-6.033.73,25.077,25.077,0,0,1-6.03-.736A1.927,1.927,0,0,1,9,20.3a7.5,7.5,0,1,1,15,0ZM16.5,4a3.587,3.587,0,0,0-3.587,3.587v.652a3.587,3.587,0,0,0,7.174,0V7.587A3.587,3.587,0,0,0,16.5,4ZM13.148,18.635a3.812,3.812,0,0,1,1.2-1.4.653.653,0,0,0-.753-1.066,5.126,5.126,0,0,0-1.63,1.885.658.658,0,0,0,1.18.584Z" transform="translate(129 107)"/></g></svg>
-                    <p className={`${pathname === "/profile" ? "orange" : "dark-grey"} text-xs text-center mt-2`}>Profil</p>                
+                <svg className="my-0 mx-auto mt-2" xmlns="http://www.w3.org/2000/svg" width="15" height="18.913" viewBox="0 0 15 18.913"><g transform="translate(-138 -111)" className={`${pathname.substring(0,8) === "/profile" ? "orange-fill" : "dark-grey-fill"}`}><path d="M24,20.3a1.927,1.927,0,0,1-1.467,1.878,25.082,25.082,0,0,1-6.033.73,25.077,25.077,0,0,1-6.03-.736A1.927,1.927,0,0,1,9,20.3a7.5,7.5,0,1,1,15,0ZM16.5,4a3.587,3.587,0,0,0-3.587,3.587v.652a3.587,3.587,0,0,0,7.174,0V7.587A3.587,3.587,0,0,0,16.5,4ZM13.148,18.635a3.812,3.812,0,0,1,1.2-1.4.653.653,0,0,0-.753-1.066,5.126,5.126,0,0,0-1.63,1.885.658.658,0,0,0,1.18.584Z" transform="translate(129 107)"/></g></svg>
+                    <p className={`${pathname.substring(0,8) === "/profile" ? "orange" : "dark-grey"} text-xs text-center mt-2`}>Profil</p>                
                 </Link>
             </ul>
         );
