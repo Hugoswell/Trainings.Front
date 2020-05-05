@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStateMachine } from "little-state-machine"
 import { useForm } from "react-hook-form"
-import FormInput from "../Forms/FormInput/FormInput"
+import FormInput from "../FormInput/FormInput"
 import UpdateStore from "./UpdateStore"
 
 const UserPreferencesForm = () => {

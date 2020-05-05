@@ -2,7 +2,7 @@ import React from 'react'
 import { useStateMachine } from "little-state-machine"
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form"
-import FormInput from "../Forms/FormInput/FormInput"
+import FormInput from "../FormInput/FormInput"
 import UpdateStore from "./UpdateStore"
 import Step from "./Step"
 

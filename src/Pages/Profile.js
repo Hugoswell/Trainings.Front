@@ -3,8 +3,8 @@ import Header from "../components/Header/Header";
 import BottomNav from "../components/BottomNav/BottomNav"
 import { StateMachineProvider, createStore, DevTool } from "little-state-machine"
 import { useLocation } from "react-router"
-import UserPreferencesForm from "../components/Forms/UserPreferencesForm"
-import UserPhysicalForm from "../components/Forms/UserPhysicalForm"
+import UserPreferencesForm from "../components/Forms/UserForm/UserPreferencesForm"
+import UserPhysicalForm from "../components/Forms/UserForm/UserPhysicalForm"
 
 createStore({
   profileInformation: {
