@@ -2,9 +2,10 @@ import React from 'react'
 import { useStateMachine } from "little-state-machine"
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form"
-import FormInput from "../FormInput/FormInput"
 import UpdateStore from "./UpdateStore"
-import Step from "./Step"
+import UserFormStep from "./UserFormStep"
+import FormLabel from "../FormLabel/FormLabel"
+import FormSelect from "../FormSelect/FormSelect"
 
 const UserPreferencesForm = () => {
     const { state, action } = useStateMachine(UpdateStore);
@@ -19,31 +20,16 @@ const UserPreferencesForm = () => {
 
     return (
         <div className="container-85">
-            <Step step="1" text="Vos préférences ?"/>
-            <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
-                <h2>Step 1</h2>
-                <FormInput
-                    register={register}
-                    type="text"
-                    name="firstName"
-                    placeholder="Prénom"
-                    required="Prénom requis"
-                    message="Prénom invalide"
-                    validation={/^[A-Z]+$/i}
-                />
+            <UserFormStep stepNumber="1" text="Vos préférences ?"/>
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-8 flex flex-col">
+                <FormLabel htmlFor="goal" text="Votre objectif"/>
+                <FormSelect />
+
                 <span className="mb-6 text-red-500 gotham-book">
                     {errors.FirstName && errors.FirstName.message}
                 </span>
 
-                <FormInput
-                    register={register}
-                    type="text"
-                    name="lastName"
-                    placeholder="Nom"
-                    required="Nom requis"
-                    message="Nom invalide"
-                    validation={/^[A-Z]+$/i}
-                />
+                <FormLabel htmlFor="" text=""/>
                 <span className="mb-6 text-red-500 gotham-book">
                     {errors.LastName && errors.LastName.message}
                 </span>
