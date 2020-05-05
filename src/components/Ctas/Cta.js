@@ -4,7 +4,7 @@ const Cta = (props) => {
   return (
     <button
       type="submit"
-      className="h-14 mb-32 orange-bg rounded text-lg text-white text-center gotham-bold"
+      className="h-14 mt-8 mb-32 orange-bg rounded text-lg text-white text-center gotham-bold"
     >
       {props.text}
     </button>

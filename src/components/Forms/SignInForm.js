@@ -58,7 +58,7 @@ const SignInForm = () => {
         message="Email invalide"
         validation={/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i}
       />
-      <span className="mb-6 text-red-500 gotham-book">
+      <span className="mt-2 text-red-500 gotham-book">
         {errors.Email && errors.Email.message}
       </span>
 
@@ -71,7 +71,7 @@ const SignInForm = () => {
         message="8 à 30 caractères"
         validation={/^[A-Z0-9.@&(!)_%+-^¨$*=/:]{8,30}$/i}
       />
-      <span className="mb-6 text-red-500 gotham-book">
+      <span className="mt-2 text-red-500 gotham-book">
         {errors.Password && errors.Password.message}
       </span>
 

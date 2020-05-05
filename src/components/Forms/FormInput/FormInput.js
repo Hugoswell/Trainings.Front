@@ -3,7 +3,7 @@ import React from "react";
 const FormInput = (props) => {
   return (
     <input
-      className="h-14 pl-6 mb-2 light-grey-bg dark-grey gotham-medium text-lg rounded-lg placeholder"
+      className="h-14 pl-6 mt-6 light-grey-bg dark-grey gotham-medium text-lg rounded-lg placeholder"
       name={props.name}
       type={props.type}
       placeholder={props.placeholder}

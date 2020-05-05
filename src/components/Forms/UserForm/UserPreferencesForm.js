@@ -23,16 +23,11 @@ const UserPreferencesForm = () => {
             <UserFormStep stepNumber="1" text="Vos préférences ?"/>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-8 flex flex-col">
                 <FormLabel htmlFor="goal" text="Votre objectif"/>
-                <FormSelect />
-
-                <span className="mb-6 text-red-500 gotham-book">
-                    {errors.FirstName && errors.FirstName.message}
+                <FormSelect name="goal" register={register} required="Veuillez choisir un objectif"/>
+                <span className="mt-2 text-red-500 gotham-book">
+                    {errors.goal && errors.goal.message}
                 </span>
-
-                <FormLabel htmlFor="" text=""/>
-                <span className="mb-6 text-red-500 gotham-book">
-                    {errors.LastName && errors.LastName.message}
-                </span>
+                
                 <input type="submit"/>
             </form>
         </div>
