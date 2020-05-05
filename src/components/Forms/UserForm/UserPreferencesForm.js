@@ -18,13 +18,16 @@ const UserPreferencesForm = () => {
         action(data);
         push("/profile/physical");
     };
+    const goals = [
+        "Banana", "Orange", "Apple", "Mango"
+    ];
 
-    return (        
+    return (
         <div className="container-85">
             <UserFormStep stepNumber="1" text="Vos préférences ?"/>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-2 flex flex-col">
                 <FormLabel htmlFor="goal" text="Votre objectif"/>
-                <FormSelect name="goal" register={register} required="Veuillez choisir un objectif"/>
+                <FormSelect name="goal" list={goals} register={register} required="Veuillez choisir un objectif"/>
                 <span className="mt-2 text-red-500 gotham-book">
                     {errors.goal && errors.goal.message}
                 </span>
@@ -48,8 +51,8 @@ const UserPreferencesForm = () => {
                 </span>
 
                 <div className="flex justify-center">
-                    <SmallCta text="SUIVANT" />
-                </div>                
+                    <SmallCta text="SUIVANT&nbsp;&nbsp;&nbsp;>" />
+                </div>
             </form>
         </div>        
     )
