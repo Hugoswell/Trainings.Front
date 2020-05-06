@@ -100,7 +100,7 @@ const SignUpForm = () => {
       </span>
 
       <Loader loading={loading}/>
-      {loading && <div className="mb-6"></div> }
+      {loading && <div className="mt-2"></div> }
       <Cta text="REJOINDRE TRAININGS" />
     </form>
   );

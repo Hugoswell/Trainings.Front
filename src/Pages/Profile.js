@@ -7,11 +7,7 @@ import UserPreferencesForm from "../components/Forms/UserForm/UserPreferencesFor
 import UserPhysicalForm from "../components/Forms/UserForm/UserPhysicalForm"
 
 createStore({
-  profileInformation: {
-    firstName: "",
-    lastName : "",
-    age: "",
-    yearsOfExp: ""
+  profileInformation: {    
   }
 });
 
