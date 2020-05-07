@@ -1,8 +1,8 @@
 const UpdateStore = (state, payload) => {
     return {
         ...state,
-        profileInformation: {
-            ...state.profileInformation,
+        userInformation: {
+            ...state.userInformation,
             ...payload
         }
     };

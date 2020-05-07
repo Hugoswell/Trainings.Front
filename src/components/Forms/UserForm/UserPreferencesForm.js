@@ -10,7 +10,7 @@ import SmallCta from "../../Ctas/SmallCta"
 const UserPreferencesForm = () => {
     const { state, action } = useStateMachine(UpdateStore);
     const { handleSubmit, register, errors } = useForm({
-        defaultValues: state.profileInformation
+        defaultValues: state.userInformation
     });
     const { push } = useHistory();
     const onSubmit = data => {

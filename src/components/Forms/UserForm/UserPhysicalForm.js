@@ -11,15 +11,14 @@ import Loader from "../../Loader/Loader"
 const UserPreferencesForm = () => {
     const { state, action } = useStateMachine(UpdateStore);
     const { handleSubmit, register, errors } = useForm({
-        defaultValues: state.profileInformation
+        defaultValues: state.userInformation
     });
     const { push } = useHistory();
     const [loading, setLoading] = useState(false);
 
-    const onSubmit = data => {
-        setLoading(true);
+    const onSubmit = data => {        
         action(data);
-        console.log(state.profileInformation);
+        push("/profile/finish")
     };
     
     const handlePrevious = () => {
