@@ -42,10 +42,10 @@ const UserPreferencesForm = () => {
         <div className="container-85">
             <UserFormStep stepNumber="2" text="Votre physique ?"/>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-2 flex flex-col">
-                <FormLabel htmlFor="level" text="Votre niveau"/>
+                <FormLabel htmlFor="Level" text="Votre niveau"/>
                 <select
                     id="level"
-                    name="level"
+                    name="Level"
                     ref={register({
                         required: "Veuillez choisir votre niveau"
                     })}
@@ -62,11 +62,11 @@ const UserPreferencesForm = () => {
                     {errors.level && errors.level.message}
                 </span>
                 
-                <FormLabel htmlFor="height" text="Votre taile"/>
+                <FormLabel htmlFor="Height" text="Votre taile"/>
                 <FormInput
                     register={register}
                     type="number"
-                    name="height"
+                    name="Height"
                     placeholder="170 (cm)"
                     required="Taille requise"
                     message="Taille invalide"
@@ -76,11 +76,11 @@ const UserPreferencesForm = () => {
                     {errors.height && errors.height.message}
                 </span>
 
-                <FormLabel htmlFor="weight" text="Votre poids"/>
+                <FormLabel htmlFor="Weight" text="Votre poids"/>
                 <FormInput
                     register={register}
                     type="number"
-                    name="weight"
+                    name="Weight"
                     placeholder="65 (Kg)"
                     required="Poids requis"
                     message="Poids invalide"
@@ -90,11 +90,11 @@ const UserPreferencesForm = () => {
                     {errors.weight && errors.weight.message}
                 </span>
 
-                <FormLabel htmlFor="age" text="Votre âge"/>
+                <FormLabel htmlFor="Age" text="Votre âge"/>
                 <FormInput
                     register={register}
                     type="number"
-                    name="age"
+                    name="Age"
                     placeholder="32"
                     required="Age requis"
                     message="Age invalide"
@@ -104,10 +104,10 @@ const UserPreferencesForm = () => {
                     {errors.age && errors.age.message}
                 </span>
 
-                <FormLabel htmlFor="sex" text="Votre sexe"/>
+                <FormLabel htmlFor="Sex" text="Votre sexe"/>
                 <select
                     id="sex"
-                    name="sex"
+                    name="Sex"
                     ref={register({
                         required: "Veuillez choisir votre sexe"
                     })}

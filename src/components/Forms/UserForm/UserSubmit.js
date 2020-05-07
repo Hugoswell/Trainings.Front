@@ -8,7 +8,7 @@ import Axios from "axios"
 const UserSubmit = () => {
     const [loading, setLoading] = useState(true);
     const { state } = useStateMachine(UpdateStore);
-    const url = UrlBuilder("https://api.trainings.agency", "/user", "/filling");
+    const url = UrlBuilder("https://api.trainings.agency", "/user", "/create");
 
     useEffect(() => {
         Axios.post(url, state.userInformation)

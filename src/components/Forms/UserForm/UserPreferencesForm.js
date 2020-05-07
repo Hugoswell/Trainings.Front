@@ -67,11 +67,11 @@ const UserPreferencesForm = () => {
         <div className="container-85">
             <UserFormStep stepNumber="1" text="Vos préférences ?"/>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-2 flex flex-col">
-                <FormLabel htmlFor="goal" text="Votre objectif"/>
+                <FormLabel htmlFor="Goal" text="Votre objectif"/>
                 <select
                     onChange={handleOnChangeGoal}
                     id="goal"
-                    name="goal"
+                    name="Goal"
                     ref={register({
                         required: "Veuillez choisir votre objectif"
                     })}
@@ -88,10 +88,10 @@ const UserPreferencesForm = () => {
                     {errors.goal && errors.goal.message}
                 </span>
                 
-                <FormLabel htmlFor="trainingType" text="Votre type d’entrainement"/>
+                <FormLabel htmlFor="TrainingType" text="Votre type d’entrainement"/>
                 <select
                     id="trainingType"
-                    name="trainingType"
+                    name="TrainingType"
                     ref={register({
                         required: "Veuillez choisir votre type d'entrainement"
                     })}
@@ -108,10 +108,10 @@ const UserPreferencesForm = () => {
                     {errors.trainingType && errors.trainingType.message}
                 </span>
 
-                <FormLabel htmlFor="trainingDuration" text="Durée d’entrainement"/>
+                <FormLabel htmlFor="TrainingDuration" text="Durée d’entrainement"/>
                 <select
                     id="trainingDuration"
-                    name="trainingDuration"
+                    name="TrainingDuration"
                     ref={register({
                         required: "Veuillez choisir votre durée d'entrainement"
                     })}
@@ -128,10 +128,10 @@ const UserPreferencesForm = () => {
                     {errors.trainingDuration && errors.trainingDuration.message}
                 </span>
 
-                <FormLabel htmlFor="equipment" text="Votre matériel"/>
+                <FormLabel htmlFor="Equipment" text="Votre matériel"/>
                 <select
                     id="equipment"
-                    name="equipment"
+                    name="Equipment"
                     ref={register({
                         required: "Veuillez choisir votre durée d'entrainement"
                     })}
