@@ -18,7 +18,7 @@ const UserPreferencesForm = () => {
 
     const onSubmit = data => {        
         action(data);
-        push("/profile/finish")
+        push("/profile/submission")
     };
     
     const handlePrevious = () => {
