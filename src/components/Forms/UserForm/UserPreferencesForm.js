@@ -25,18 +25,21 @@ const UserPreferencesForm = () => {
         { value: "4", text: "Force" }
     ];
     const [trainingTypes, setTrainingTypes] = useState([
+        { value: "", text: "Sélectionner" },
         { value: "1", text: "Musculation" },
         { value: "2", text: "Cardio" },
         { value: "3", text: "Crossfit" },
         { value: "4", text: "HIIT" }
     ]);
     const trainingDurations = [
+        { value: "", text: "Sélectionner" },
         { value: "1", text: "15 - 30 min" },
         { value: "2", text: "30 - 45 min" },
         { value: "3", text: "45 min - 1H" },
         { value: "4", text: "1H - 2H" }
     ];
     const equipments = [
+        { value: "", text: "Sélectionner" },
         { value: "1", text: "A poids de corps" },
         { value: "2", text: "Salle de sport" },
         { value: "3", text: "Matériel à la maison" }

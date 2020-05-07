@@ -77,7 +77,7 @@ const SignInForm = () => {
 
       <Loader loading={loading}/>
       {loading && <div className="mt-2"></div> }
-      <Cta text="ME CONNECTER" />
+      <Cta text="ME CONNECTER" loading={loading}/>
     </form>
   );
 };
