@@ -5,9 +5,10 @@ import { StateMachineProvider, createStore, DevTool } from "little-state-machine
 import { useLocation } from "react-router"
 import UserPreferencesForm from "../components/Forms/UserForm/UserPreferencesForm"
 import UserPhysicalForm from "../components/Forms/UserForm/UserPhysicalForm"
+import UserSubmit from "../components/Forms/UserForm/UserSubmit"
 
 createStore({
-  profileInformation: {    
+  userInformation: {
   }
 });
 
@@ -17,9 +18,10 @@ const Profile = () => {
     <>
       <Header />
       <StateMachineProvider>
-        {process.env.NODE_ENV !== 'production' && <DevTool />}
+        { process.env.NODE_ENV !== 'production' && <DevTool /> }
         { location.pathname === "/profile/preferences" && <UserPreferencesForm/> }
-        { location.pathname === "/profile/physical" && <UserPhysicalForm/> }                
+        { location.pathname === "/profile/physical" && <UserPhysicalForm/> }
+        { location.pathname === "/profile/submission" && <UserSubmit/> }
       </StateMachineProvider>
       <div className="h-16"></div>
       <BottomNav/>
