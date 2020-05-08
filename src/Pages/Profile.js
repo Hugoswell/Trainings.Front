@@ -16,7 +16,7 @@ import AuthContext from "../App/AuthContext";
 
 const Profile = () => {	
 	const jwt = Cookies.get("JWT");
-	const hasFilledInfo = false;
+	let hasFilledInfo = false;
 	const location = useLocation();
 	const { push } = useHistory();
 	const { setAuth } = useContext(AuthContext);

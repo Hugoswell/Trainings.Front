@@ -29,7 +29,7 @@ const UserSubmit = () => {
             })
             .catch((error) => {
                 setLoading(false);
-                console.log(error.data);
+                console.log(error.message);
             });
         }
     });

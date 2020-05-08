@@ -60,11 +60,11 @@ const UserPreferencesForm = () => {
                     {errors.LevelId && errors.LevelId.message}
                 </span>
                 
-                <FormLabel htmlFor="HeightId" text="Votre taile"/>
+                <FormLabel htmlFor="Height" text="Votre taile"/>
                 <FormInput
                     register={register}
                     type="text"
-                    name="HeightId"
+                    name="Height"
                     placeholder="1,70 (m)"
                     required="Taille requise"
                     message="Respecter le format suivant : 1,70"
@@ -74,11 +74,11 @@ const UserPreferencesForm = () => {
                     {errors.HeightId && errors.HeightId.message}
                 </span>
 
-                <FormLabel htmlFor="WeightId" text="Votre poids"/>
+                <FormLabel htmlFor="Weight" text="Votre poids"/>
                 <FormInput
                     register={register}
                     type="number"
-                    name="WeightId"
+                    name="Weight"
                     placeholder="65 (Kg)"
                     required="Poids requis"
                     message="Poids invalide"
