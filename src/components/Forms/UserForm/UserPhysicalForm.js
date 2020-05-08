@@ -42,10 +42,10 @@ const UserPreferencesForm = () => {
         <div className="container-85">
             <UserFormStep stepNumber="2" text="Votre physique ?"/>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-2 flex flex-col">
-                <FormLabel htmlFor="Level" text="Votre niveau"/>
+                <FormLabel htmlFor="LevelId" text="Votre niveau"/>
                 <select
-                    id="level"
-                    name="Level"
+                    id="LevelId"
+                    name="LevelId"
                     ref={register({
                         required: "Veuillez choisir votre niveau"
                     })}
@@ -59,35 +59,35 @@ const UserPreferencesForm = () => {
                     }
                 </select>
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.level && errors.level.message}
+                    {errors.LevelId && errors.LevelId.message}
                 </span>
                 
-                <FormLabel htmlFor="Height" text="Votre taile"/>
+                <FormLabel htmlFor="HeightId" text="Votre taile"/>
                 <FormInput
                     register={register}
-                    type="number"
-                    name="Height"
-                    placeholder="170 (cm)"
+                    type="text"
+                    name="HeightId"
+                    placeholder="1,70 (m)"
                     required="Taille requise"
-                    message="Taille invalide"
-                    validation={/^[0-9]{3}$/i}
+                    message="Respecter le format suivant : 1,70"
+                    validation={/^[0-9]{1},[0-9]{2}$/i}
                 />
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.height && errors.height.message}
+                    {errors.HeightId && errors.HeightId.message}
                 </span>
 
-                <FormLabel htmlFor="Weight" text="Votre poids"/>
+                <FormLabel htmlFor="WeightId" text="Votre poids"/>
                 <FormInput
                     register={register}
                     type="number"
-                    name="Weight"
+                    name="WeightId"
                     placeholder="65 (Kg)"
                     required="Poids requis"
                     message="Poids invalide"
                     validation={/^[0-9]{2,3}$/i}
                 />
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.weight && errors.weight.message}
+                    {errors.WeightId && errors.WeightId.message}
                 </span>
 
                 <FormLabel htmlFor="Age" text="Votre âge"/>
@@ -101,13 +101,13 @@ const UserPreferencesForm = () => {
                     validation={/^[0-9]{2}$/i}
                 />
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.age && errors.age.message}
+                    {errors.Age && errors.Age.message}
                 </span>
 
-                <FormLabel htmlFor="Sex" text="Votre sexe"/>
+                <FormLabel htmlFor="SexId" text="Votre sexe"/>
                 <select
-                    id="sex"
-                    name="Sex"
+                    id="SexId"
+                    name="SexId"
                     ref={register({
                         required: "Veuillez choisir votre sexe"
                     })}
@@ -121,7 +121,7 @@ const UserPreferencesForm = () => {
                     }
                 </select>
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.sex && errors.sex.message}
+                    {errors.SexId && errors.SexId.message}
                 </span>
 
                 <Loader loading={loading}/>

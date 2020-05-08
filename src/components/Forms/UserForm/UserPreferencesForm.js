@@ -67,11 +67,11 @@ const UserPreferencesForm = () => {
         <div className="container-85">
             <UserFormStep stepNumber="1" text="Vos préférences ?"/>
             <form onSubmit={handleSubmit(onSubmit)} className="mt-2 flex flex-col">
-                <FormLabel htmlFor="Goal" text="Votre objectif"/>
+                <FormLabel htmlFor="GoalId" text="Votre objectif"/>
                 <select
                     onChange={handleOnChangeGoal}
-                    id="goal"
-                    name="Goal"
+                    id="GoalId"
+                    name="GoalId"
                     ref={register({
                         required: "Veuillez choisir votre objectif"
                     })}
@@ -85,13 +85,13 @@ const UserPreferencesForm = () => {
                     }
                 </select>
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.goal && errors.goal.message}
+                    {errors.GoalId && errors.GoalId.message}
                 </span>
                 
-                <FormLabel htmlFor="TrainingType" text="Votre type d’entrainement"/>
+                <FormLabel htmlFor="TrainingTypeId" text="Votre type d’entrainement"/>
                 <select
-                    id="trainingType"
-                    name="TrainingType"
+                    id="TrainingTypeId"
+                    name="TrainingTypeId"
                     ref={register({
                         required: "Veuillez choisir votre type d'entrainement"
                     })}
@@ -105,13 +105,13 @@ const UserPreferencesForm = () => {
                     }
                 </select>
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.trainingType && errors.trainingType.message}
+                    {errors.TrainingTypeId && errors.TrainingTypeId.message}
                 </span>
 
-                <FormLabel htmlFor="TrainingDuration" text="Durée d’entrainement"/>
+                <FormLabel htmlFor="TrainingDurationId" text="Durée d’entrainement"/>
                 <select
-                    id="trainingDuration"
-                    name="TrainingDuration"
+                    id="TrainingDurationId"
+                    name="TrainingDurationId"
                     ref={register({
                         required: "Veuillez choisir votre durée d'entrainement"
                     })}
@@ -125,13 +125,13 @@ const UserPreferencesForm = () => {
                     }
                 </select>
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.trainingDuration && errors.trainingDuration.message}
+                    {errors.TrainingDurationId && errors.TrainingDurationId.message}
                 </span>
 
-                <FormLabel htmlFor="Equipment" text="Votre matériel"/>
+                <FormLabel htmlFor="EquipmentId" text="Votre matériel"/>
                 <select
-                    id="equipment"
-                    name="Equipment"
+                    id="EquipmentId"
+                    name="EquipmentId"
                     ref={register({
                         required: "Veuillez choisir votre durée d'entrainement"
                     })}
@@ -145,7 +145,7 @@ const UserPreferencesForm = () => {
                     }
                 </select>
                 <span className="mt-2 text-red-500 gotham-book">
-                    {errors.equipment && errors.equipment.message}
+                    {errors.EquipmentId && errors.EquipmentId.message}
                 </span>
                 
                 <div className="flex justify-center">
