@@ -9,48 +9,47 @@ import { useHistory } from "react-router-dom";
 import AuthContext from "../App/AuthContext"
 
 const Dashboard = () => {
-  const jwt = Cookies.get("JWT");
-  const [hasFilledInfo, setHasFilledInfo] = useState(true);
-  const history = useHistory();
-  const { setAuth } = useContext(AuthContext);
+	const jwt = Cookies.get("JWT");
+	const [hasFilledInfo, setHasFilledInfo] = useState(true);
+	const { push } = useHistory();
+	const { setAuth } = useContext(AuthContext);
 
-  useEffect(() => {
-    if (!jwt) {
-      history.push("/signin");
-    }
-    else {
-      getUserInformation(jwt);
-    }
-  });
+	useEffect(() => {
+		if (!jwt) {
+			setAuth(false);
+			push("/signin");
+		}
+		else {
+			getUserInformation(jwt);
+		}
+	});
 
-  const getUserInformation = (jwt) => {
-    const url = UrlBuilder("https://api.trainings.agency", "/auth", "/me");
+	const getUserInformation = (jwt) => {
+		const url = UrlBuilder("https://api.trainings.agency", "/auth", "/me");
 
-    Axios.get(url, { headers: {  Authorization: `Bearer ${jwt}` } })
-    .then((response) => {
-      getUserInformationCallback(response);
-    })
-    .catch((error) => {
-      Cookies.remove("JWT");
-      setAuth(false);
-      history.push("/signin");
-    });
-  };
+		Axios.get(url, { headers: {  Authorization: `Bearer ${jwt}` } })
+			.then((response) => {
+				getUserInformationCallback(response);
+			})
+			.catch((error) => {
+				console.log(error.data);
+			});
+	};
 
-  const getUserInformationCallback = (response) => {
-    response.data[3] === "False" && setHasFilledInfo(false);
-  }
+	const getUserInformationCallback = (response) => {
+		response.data[3] === "False" && setHasFilledInfo(false);
+	}
    
-  return (
-    <>
-      <Header />
-      <div className="container-85">
-        { !hasFilledInfo && <UserInformationWarning /> }
-      </div>
-      <div className="h-16"></div>
-      <BottomNav/>
-    </>
-  );
+	return (
+		<>
+			<Header />
+			<div className="container-85">
+			{ !hasFilledInfo && <UserInformationWarning /> }
+			</div>
+			<div className="h-16"></div>
+			<BottomNav/>
+		</>
+	);
 };
 
 export default Dashboard;

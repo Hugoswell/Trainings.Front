@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useStateMachine } from "little-state-machine"
 import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form"
@@ -6,15 +6,13 @@ import UpdateStore from "./UpdateStore"
 import UserFormStep from "./UserFormStep"
 import FormLabel from "../FormLabel/FormLabel"
 import FormInput from "../FormInput/FormInput"
-import Loader from "../../Loader/Loader"
 
 const UserPreferencesForm = () => {
     const { state, action } = useStateMachine(UpdateStore);
     const { handleSubmit, register, errors } = useForm({
         defaultValues: state.userInformation
     });
-    const { push } = useHistory();
-    const [loading, setLoading] = useState(false);
+    const { push } = useHistory();    
 
     const onSubmit = data => {        
         action(data);
@@ -123,10 +121,8 @@ const UserPreferencesForm = () => {
                 <span className="mt-2 text-red-500 gotham-book">
                     {errors.SexId && errors.SexId.message}
                 </span>
-
-                <Loader loading={loading}/>
-                {loading && <div className="mt-2"></div> }
-                <div className={`${loading ? "mt-2" : "mt-8"} flex justify-between`}>
+                
+                <div className="mt-8 flex justify-between">
                     <button onClick={handlePrevious} className="h-14 w-45 mb-32 orange-bg rounded text-lg text-white text-center gotham-bold">
                         {"< PRECEDENT"}
                     </button>
