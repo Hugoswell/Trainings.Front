@@ -10,7 +10,6 @@
     "axios": "^0.19.2",
     "cssnano": "^4.1.10",
     "js-cookie": "^2.2.1",
-    "little-state-machine": "^2.14.1",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
     "react": "^16.13.1",
