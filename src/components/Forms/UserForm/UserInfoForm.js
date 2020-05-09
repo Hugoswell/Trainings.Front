@@ -15,7 +15,7 @@ const UserInfoForm = () => {
     const jwt = Cookies.get("JWT");
     const { setAuth } = useContext(AuthContext);
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const { push } = useHistory();    
 
     const url = UrlBuilder("https://api.trainings.agency", "/userinfo", "/get");
@@ -28,6 +28,7 @@ const UserInfoForm = () => {
         Axios.get(url, { headers: {  Authorization: `Bearer ${jwt}` } })
         .then((response) => {
             setData(response.data);
+            setLoading(false);
         })
         .catch((error) => {				
             console.log(error.data);
@@ -280,7 +281,12 @@ const UserInfoForm = () => {
             </div>        
         )
     }
-    return null;
+    return (
+        <>
+            <div className="mt-24"></div>
+            <Loader loading={loading}/>
+        </>
+    )
 }
 
 export default UserInfoForm;
