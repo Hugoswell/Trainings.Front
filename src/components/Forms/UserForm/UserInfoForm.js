@@ -17,7 +17,7 @@ const UserInfoForm = () => {
     const { setAuth } = useContext(AuthContext);
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
-    const { push } = useHistory();    
+    const { push } = useHistory();
 
     const fetchingUrl = UrlBuilder("https://api.trainings.agency", "/userinfo", "/get");
     const submittingUrl = 
