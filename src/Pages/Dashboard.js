@@ -7,50 +7,57 @@ import Axios from "axios"
 import UrlBuilder from "../components/Helpers/UrlBuilder" 
 import { useHistory } from "react-router-dom";
 import AuthContext from "../App/AuthContext"
+import Loader from "../components/Loader/Loader"
 
 const Dashboard = () => {
-  const jwt = Cookies.get("JWT");
-  const [hasFilledInfo, setHasFilledInfo] = useState(true);
-  const history = useHistory();
-  const { setAuth } = useContext(AuthContext);
+	const [fetchedHasFilledInfo, setFetchedHasFilledInfo] = useState(false);
+	const jwt = Cookies.get("JWT");
+	const hasFilledInfo = localStorage.getItem('hasFilledInfo');
+	const { push } = useHistory();
+	const { setAuth } = useContext(AuthContext);
 
-  useEffect(() => {
-    if (!jwt) {
-      history.push("/signin");
-    }
-    else {
-      getUserInformation(jwt);
-    }
-  });
+	useEffect(() => {
+		if (!jwt) {
+			setAuth(false);
+			push("/signin");
+		}
+		else {
+			const url = UrlBuilder("https://api.trainings.agency", "/user", "/gethasfilledinfo");
+			Axios.get(url, { headers: {  Authorization: `Bearer ${jwt}` } })
+				.then((response) => {
+					SetHasFilledInfoInLocalStorage(response);
+				})
+				.catch((error) => {
+					console.log(error.data);
+			});
+		}
+	});
 
-  const getUserInformation = (jwt) => {
-    const url = UrlBuilder("https://api.trainings.agency", "/auth", "/me");
-
-    Axios.get(url, { headers: {  Authorization: `Bearer ${jwt}` } })
-    .then((response) => {
-      getUserInformationCallback(response);
-    })
-    .catch((error) => {
-      Cookies.remove("JWT");
-      setAuth(false);
-      history.push("/signin");
-    });
-  };
-
-  const getUserInformationCallback = (response) => {
-    response.data[3] === "False" && setHasFilledInfo(false);
-  }
+	const SetHasFilledInfoInLocalStorage = (response) => {
+		localStorage.setItem('hasFilledInfo', response.data);
+		setFetchedHasFilledInfo(true);
+	}	
    
-  return (
-    <>
-      <Header />
-      <div className="container-85">
-        { !hasFilledInfo && <UserInformationWarning /> }
-      </div>
-      <div className="h-16"></div>
-      <BottomNav/>
-    </>
-  );
+	if (fetchedHasFilledInfo) {
+		return (
+			<>
+				<Header />
+				<div className="container-85">
+				{ hasFilledInfo === "false" && <UserInformationWarning /> }
+				</div>
+				<div className="h-16"></div>
+				<BottomNav/>
+			</>
+		);
+	}
+	return (
+		<>
+			<Header />
+			<div className="mt-24"></div>
+			<Loader loading="true"/>
+			<BottomNav/>
+		</>
+	)
 };
 
 export default Dashboard;

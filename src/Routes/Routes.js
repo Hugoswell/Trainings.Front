@@ -23,9 +23,7 @@ const Routes = () => {
       <ProtectedSignIn exact path="/signin" component={SignIn} />
       <ProtectedRoute exact path="/dashboard" component={Dashboard} />
       <ProtectedRoute exact path="/trainings" component={Trainings} />
-      <ProtectedRoute exact path="/profile/preferences" component={Profile} />
-      <ProtectedRoute exact path="/profile/physical" component={Profile} />
-      <ProtectedRoute exact path="/profile/submission" component={Profile} />
+      <ProtectedRoute exact path="/profile" component={Profile} />
     </Switch>
   );
 };

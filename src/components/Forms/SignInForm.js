@@ -13,18 +13,18 @@ const SignInForm = () => {
 	const { handleSubmit, register, errors } = useForm();
 	const { setAuth } = useContext(AuthContext);
 	const [loading, setLoading] = useState(false);
-	const history = useHistory();
+	const { push } = useHistory();
 
 	const SignUpCallback = (data) => {
-	Cookies.set(
-		"JWT",
-		data,
-		{
-		expires: 1,
-		}
-	);
-	setAuth(true);
-	history.push("/dashboard");
+		Cookies.set(
+			"JWT",
+			data,
+			{
+				expires: 1,
+			}
+		);
+		setAuth(true);
+		push("/dashboard");
 	};
 
 	let url = UrlBuilder("https://api.trainings.agency", "/auth", "/signin");
@@ -45,40 +45,40 @@ const SignInForm = () => {
 	};
 
 	return (
-	<form
-		onSubmit={handleSubmit(onSubmit)}
-		className="container-85 mt-24 flex flex-col"
-	>
-		<FormInput
-		register={register}
-		type="email"
-		name="Email"
-		placeholder="Email"
-		required="Email requis"
-		message="Email invalide"
-		validation={/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i}
-		/>
-		<span className="mt-2 text-red-500 gotham-book">
-		{errors.Email && errors.Email.message}
-		</span>
+		<form
+			onSubmit={handleSubmit(onSubmit)}
+			className="container-85 mt-24 flex flex-col"
+		>
+			<FormInput
+				register={register}
+				type="email"
+				name="Email"
+				placeholder="Email"
+				required="Email requis"
+				message="Email invalide"
+				validation={/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i}
+			/>
+			<span className="mt-2 text-red-500 gotham-book">
+				{errors.Email && errors.Email.message}
+			</span>
 
-		<FormInput
-		register={register}
-		type="password"
-		name="Password"
-		placeholder="Mot de passe"
-		required="Mot de passe requis"
-		message="8 à 30 caractères"
-		validation={/^[A-Z0-9.@&(!)_%+-^¨$*=/:]{8,30}$/i}
-		/>
-		<span className="mt-2 text-red-500 gotham-book">
-		{errors.Password && errors.Password.message}
-		</span>
+			<FormInput
+				register={register}
+				type="password"
+				name="Password"
+				placeholder="Mot de passe"
+				required="Mot de passe requis"
+				message="8 à 30 caractères"
+				validation={/^[A-Z0-9.@&(!)_%+-^¨$*=/:]{8,30}$/i}
+			/>
+			<span className="mt-2 text-red-500 gotham-book">
+				{errors.Password && errors.Password.message}
+			</span>
 
-		<Loader loading={loading}/>
-		{loading && <div className="mt-2"></div> }
-		<Cta text="ME CONNECTER" loading={loading}/>
-	</form>
+			<Loader loading={loading}/>
+			{loading && <div className="mt-2"></div> }
+			<Cta text="ME CONNECTER" loading={loading}/>
+		</form>
 	);
 };
 
