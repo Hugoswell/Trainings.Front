@@ -13,19 +13,24 @@ import AuthContext from "../../../App/AuthContext";
 
 const UserInfoForm = () => {
     const jwt = Cookies.get("JWT");
+    const hasFilledInfo = localStorage.getItem('hasFilledInfo');
     const { setAuth } = useContext(AuthContext);
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const { push } = useHistory();    
 
-    const url = UrlBuilder("https://api.trainings.agency", "/userinfo", "/get");
+    const fetchingUrl = UrlBuilder("https://api.trainings.agency", "/userinfo", "/get");
+    const submittingUrl = 
+    (hasFilledInfo === "true"
+    ? UrlBuilder("https://api.trainings.agency", "/userinfo", "/update")
+    : UrlBuilder("https://api.trainings.agency", "/userinfo", "/create"))
     
     if (!jwt) {
         setAuth(false);
         push("/signin");
     }
     else if (!data) {
-        Axios.get(url, { headers: {  Authorization: `Bearer ${jwt}` } })
+        Axios.get(fetchingUrl, { headers: {  Authorization: `Bearer ${jwt}` } })
         .then((response) => {
             setData(response.data);
             setLoading(false);
@@ -43,10 +48,31 @@ const UserInfoForm = () => {
         }
 	}, [data]);
 
-    const onSubmit = data => {
-        setLoading(true)
-        push("/dashboard");
+    const onSubmit = (values) => {
+        setLoading(true);
+
+        if (hasFilledInfo === "true") {
+            Axios.put(submittingUrl, values, { headers: {  Authorization: `Bearer ${jwt}` } })
+            .then((response) => {
+                setLoading(false);
+                push("/dashboard");
+            })
+            .catch((error) => {
+                console.log(error.data);
+            });
+        }
+        else {
+            Axios.post(submittingUrl, values, { headers: {  Authorization: `Bearer ${jwt}` } })
+            .then((response) => {
+                setLoading(false);
+                push("/dashboard");
+            })
+            .catch((error) => {
+                console.log(error.data);
+            });
+        }
     };
+
     const goals = [
         { value: "", text: "Sélectionner" },
         { value: "1", text: "Perte de poids" },
@@ -218,10 +244,10 @@ const UserInfoForm = () => {
                         register={form.register}
                         type="text"
                         name="height"
-                        placeholder="1,70 (m)"
+                        placeholder="170 (cm)"
                         required="Taille requise"
-                        message="Respecter le format suivant : 1,70"
-                        validation={/^[0-9]{1},[0-9]{2}$/i}
+                        message="Taille invalide"
+                        validation={/^[0-9]{3}$/i}
                     />
                     <span className="mt-2 text-red-500 gotham-book">
                         {form.errors.height && form.errors.height.message}
