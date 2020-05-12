@@ -124,7 +124,7 @@ const UserInfoForm = () => {
                 setTrainingTypes(() => [{ value: "3", text: "Crossfit" }])
                 break;
             case "4":
-                setTrainingTypes(() => [{ value: "1", text: "Musculation" }, { value: "3", text: "Crossfit" }])
+                setTrainingTypes(() => [{ value: "1", text: "Musculation" }])
                 break;
             default:
                 break;
