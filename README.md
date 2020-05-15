@@ -25,7 +25,7 @@ Puis lorsque l'application sera mature, pourquoi pas la développer en version h
 
 ## Pour quel public d’utilisateurs ?
 
-Trainings n'est pas lié a une tranche d'age ou encore des endroits géographique etc... N'importe qui ayant besoin d'un coup de pouce pour être régulier dans la Musculation, le Cardio ou encore le Crossfit, peut être satisfait par la solution Trainings.
+Trainings n'est pas lié à une tranche d'age ou encore des endroits géographique etc... N'importe qui ayant besoin d'un coup de pouce pour être régulier dans la Musculation, le Cardio ou encore le Crossfit, peut être satisfait par la solution Trainings.
 
 ## Benchmark ?
 
@@ -37,9 +37,9 @@ Un produit semblable a ce que Trainings souhaite proposer est [Freeletics](https
 
 ## Quelles orientations techniques ?
 
-Le maquettage : Adobe XD
-Le frontend : Tailwind CSS, React.js
-Le backend : C#, ASP.NET core
-La base de données : SQL Server
-Le DevOps : Azure
+Le maquettage : Adobe XD<br />
+Le frontend : Tailwind CSS, React.js<br />
+Le backend : C#, ASP.NET core<br />
+La base de données : SQL Server<br />
+Le DevOps : Azure<br />
 La gestion de projet : Azure DevOps pour le backlog
