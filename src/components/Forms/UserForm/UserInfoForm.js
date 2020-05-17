@@ -89,10 +89,10 @@ const UserInfoForm = () => {
     ]);
     const trainingDurations = [
         { value: "", text: "Sélectionner" },
-        { value: "1", text: "15 - 30 min" },
-        { value: "2", text: "30 - 45 min" },
-        { value: "3", text: "45 min - 1H" },
-        { value: "4", text: "1H - 2H" }
+        { value: "1", text: "15 - 20 min" },
+        { value: "2", text: "20 - 30 min" },
+        { value: "3", text: "30 - 45 min" },
+        { value: "4", text: "45 - 90 min" }
     ];
     const equipments = [
         { value: "", text: "Sélectionner" },
