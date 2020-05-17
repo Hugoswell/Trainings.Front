@@ -11,6 +11,7 @@ import Profile from "../Pages/Profile";
 import Vision from "../Pages/Vision";
 import Faq from "../Pages/Faq";
 import Contact from "../Pages/Contact";
+import Training from "../Pages/Training"
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
       <ProtectedRoute exact path="/dashboard" component={Dashboard} />
       <ProtectedRoute exact path="/trainings" component={Trainings} />
       <ProtectedRoute exact path="/profile" component={Profile} />
+      <ProtectedRoute exact path="/training/:id" component={Training} />
     </Switch>
   );
 };
