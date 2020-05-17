@@ -20,7 +20,7 @@ const Dashboard = () => {
 	let trainingInfoList = null;
 	if (fetchedTrainingsInfo) {
 		trainingInfoList = fetchedTrainingsInfo.map(training => <TrainingInfo key={training.id} training={training}/>)
-	}	
+	}
 
 	useEffect(() => {
 		if (!jwt) {
@@ -50,8 +50,7 @@ const Dashboard = () => {
 
 	const handleGenerateTraining = () => {
 		setLoading(true);
-		const createTrainingUrl = UrlBuilder("https://api.trainings.agency", "/training", "/create");
-		console.log(jwt);
+		const createTrainingUrl = UrlBuilder("https://api.trainings.agency", "/training", "/create");		
 		Axios.post(createTrainingUrl, null, { headers: {  Authorization: `Bearer ${jwt}` } })
 			.then((response) => {				
 				setLoading(false);
