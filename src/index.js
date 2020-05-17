@@ -8,8 +8,13 @@ const ClientIsOnMobile = () => {
     return window.screen.width <= 480;
 }
 
-{ ClientIsOnMobile() && ReactDOM.render(<App />, document.getElementById("root")); }
-{ !ClientIsOnMobile() && ReactDOM.render(<ErrorPage />, document.getElementById("root")); }
+if (ClientIsOnMobile()) {
+    ReactDOM.render(<App />, document.getElementById("root"));
+}
+else {
+    ReactDOM.render(<ErrorPage />, document.getElementById("root"));
+}
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

@@ -20,7 +20,7 @@ const Dashboard = () => {
 	let trainingInfoList = null;
 	if (fetchedTrainingsInfo) {
 		trainingInfoList = fetchedTrainingsInfo.map(training => <TrainingInfo key={training.id} training={training}/>)
-	}
+	}	
 
 	useEffect(() => {
 		if (!jwt) {
@@ -31,7 +31,7 @@ const Dashboard = () => {
 			const getHasFilledInfoUrl = UrlBuilder("https://api.trainings.agency", "/user", "/gethasfilledinfo");
 			Axios.get(getHasFilledInfoUrl, { headers: {  Authorization: `Bearer ${jwt}` } })
 				.then((response) => {
-					SetHasFilledInfoInLocalStorage(response);
+					localStorage.setItem('hasFilledInfo', response.data);
 				})
 				.catch((error) => {
 					console.log(error.data);
@@ -47,10 +47,6 @@ const Dashboard = () => {
 			});
 		}
 	});
-
-	const SetHasFilledInfoInLocalStorage = (response) => {
-		localStorage.setItem('hasFilledInfo', response.data);		
-	}
 
 	const handleGenerateTraining = () => {
 		setLoading(true);
@@ -72,17 +68,15 @@ const Dashboard = () => {
 				<Header />
 				<div className="flex flex-col container-85 mt-24">
 					{ hasFilledInfo === "false" && <UserInformationWarning /> }
-					<p className="text-lg dark-grey gotham-medium">Vos 3 derniers entrainements</p>
-					{ fetchedTrainingsInfo.length == 0 && <p className="mt-4 text-lg dark-grey gotham-light">Aucun entrainement</p> }
+					<p className="mt-4 text-lg dark-grey gotham-medium">Vos 3 derniers entrainements</p>
+					{ fetchedTrainingsInfo.length === 0 && <p className="mt-4 text-lg dark-grey gotham-light">Aucun entrainement</p> }
 					{ fetchedTrainingsInfo.length > 0 && 
 						<div>
 						{ trainingInfoList }
 						</div>
 					}
-
 					<Loader loading={loading}/>
-
-					{ hasFilledInfo === "true" && 
+					{ hasFilledInfo === "true" &&
 						<>
 							<p className="mt-8 text-lg dark-grey gotham-medium">Générer un nouvel entrainement</p>
 							<button
