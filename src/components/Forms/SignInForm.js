@@ -14,6 +14,7 @@ const SignInForm = () => {
 	const { setAuth } = useContext(AuthContext);
 	const [loading, setLoading] = useState(false);
 	const { push } = useHistory();
+	const [serverError, setserverError] = useState(false);
 
 	const SignUpCallback = (data) => {
 		Cookies.set(
@@ -40,7 +41,7 @@ const SignInForm = () => {
 		})
 		.catch((error) => {
 			setLoading(false);
-			console.log(error.data);
+			setserverError(true);
 		});
 	};
 
@@ -77,6 +78,9 @@ const SignInForm = () => {
 
 			<Loader loading={loading}/>
 			{loading && <div className="mt-2"></div> }
+			<span className="mt-2 text-red-500 gotham-book">
+				{serverError && `L'email ou le mot de passe est incorrect`}
+			</span>
 			<Cta text="ME CONNECTER" loading={loading}/>
 		</form>
 	);
