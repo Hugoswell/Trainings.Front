@@ -18,7 +18,7 @@ const Vision = () => {
           Ne vous prenez plus la tête, laissez nous faire.
         </p>
       </div>
-      <div className="h-16"></div>
+      <div className="h-32"></div>
       <BottomNav />
     </>
   );
