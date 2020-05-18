@@ -54,6 +54,8 @@ const Dashboard = () => {
 		Axios.post(createTrainingUrl, null, { headers: {  Authorization: `Bearer ${jwt}` } })
 			.then((response) => {				
 				setLoading(false);
+				const redirectUrl = `/training/${response.data}`				
+				push(redirectUrl);
 			})
 			.catch((error) => {
 				console.log(error.data);
