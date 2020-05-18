@@ -160,7 +160,7 @@ const UserInfoForm = () => {
                     </span>
                     
                     <FormLabel htmlFor="trainingTypeId" text="Votre type d’entrainement"/>
-                    <select
+                    <select                        
                         name="trainingTypeId"
                         ref={form.register({
                             required: "Veuillez choisir votre type d'entrainement"
