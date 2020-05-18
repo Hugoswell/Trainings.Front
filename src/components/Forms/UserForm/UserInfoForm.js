@@ -94,12 +94,12 @@ const UserInfoForm = () => {
         { value: "3", text: "30 - 45 min" },
         { value: "4", text: "45 - 90 min" }
     ];
-    const [equipments, setEquiments] = useState([
+    const equipments = [
         { value: "", text: "Sélectionner" },
         { value: "1", text: "A poids de corps" },
         { value: "2", text: "Salle de sport" },
         { value: "3", text: "Matériel à la maison" }
-    ]);
+    ];
     const levels = [
         { value: "", text: "Sélectionner" },
         { value: "1", text: "Débutant" },
