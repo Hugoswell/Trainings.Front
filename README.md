@@ -1,6 +1,8 @@
 ## Quel est le sujet de l'application ?
 
+
 ### `Genèse`
+
 
 Il y a quelques années de cela je m'intéressais beaucoup au sport et plus particulièrement à la musculation.
 
@@ -10,11 +12,15 @@ De là m’est venu l’idée de créer un programme, qui pourrait me générer 
 
 Trainings est une progressive web app permettant de créer des programmes de sport sur mesure.
 
+
 ### `Baseline`
+
 
 Obtenez des entraînements de sport à la fréquence que vous souhaitez et basé sur vos besoins !
 
+
 ## Quel est l'intérêt de l'application ?
+
 
 Le but est d'apporter un programme intelligent, permettant de ne plus avoir à réfléchir à la création d'entrainements de sport. En effet, tout le monde n'a pas les moyens de se payer un coach sportif ou encore le temps de s'investir dans le sport au point d'en établir ses propres entrainements.
 
